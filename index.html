@@ -26266,7 +26266,20 @@ function edBlankStudents(n) {
 }
 function edCreateStructure() {
     if (!requireAdmin()) return;
-    if (systemData._offlineDemo) { alert('Këto janë të dhëna provë. Klikoni fillimisht "🔄 Rivendos Sistemin", pastaj krijoni klasat.'); return; }
+    // platformë e re: të dhënat provë zëvendësohen me strukturën e vërtetë (bosh)
+    if (systemData._offlineDemo) {
+        if (!confirm('Tani shihen të dhëna PROVË (emra "Nxënës 1", nota të rastësishme). Ato do të fshihen dhe do të krijohen klasat e vërteta, bosh, për vitin shkollor aktual. Vazhdo?')) return;
+        var now = new Date(), y = now.getMonth() >= 7 ? now.getFullYear() : now.getFullYear() - 1;
+        systemData.classes = [];
+        systemData.teachers = [];
+        systemData.curriculum = { weeksSem1: (systemData.curriculum && systemData.curriculum.weeksSem1) || 16, weeksSem2: (systemData.curriculum && systemData.curriculum.weeksSem2) || 21, activeWeeks: edActiveWeeks() };
+        systemData.subjectTeachers = {};
+        systemData.actives = edDefaultActives();
+        if (!systemData.schoolInfo) systemData.schoolInfo = {};
+        systemData.schoolInfo.year = y + '-' + (y + 1);
+        delete systemData._offlineDemo;
+        if (typeof forceSetKnownGoodCounts === 'function') forceSetKnownGoodCounts(0, 0);
+    }
     var have = {};
     (systemData.classes || []).forEach(function(c) { have[c.className] = 1; });
     var missing = [];
