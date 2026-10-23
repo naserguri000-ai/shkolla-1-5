@@ -1567,10 +1567,10 @@
                     <div class="login-card-modern" id="loginCard">
                         <div class="login-header">
                             <h3>🔐 Identifikohuni në sistem</h3>
-                            <p>Hyni si kujdestar i klasës, mësimdhënës ose administrator</p>
+                            <p>Hyni si mësuesi/ja, mësimdhënës ose administrator</p>
                         </div>
                         <div class="login-role-tabs" id="loginRoleTabs">
-                            <button type="button" class="login-role-tab active" data-role="kujdestar" onclick="setLoginRole('kujdestar')">👨‍🏫<span>Kujdestar i klasës</span></button>
+                            <button type="button" class="login-role-tab active" data-role="kujdestar" onclick="setLoginRole('kujdestar')">👨‍🏫<span>Mësuesi/ja</span></button>
                             <button type="button" class="login-role-tab" data-role="mesimdhenes" onclick="setLoginRole('mesimdhenes')">📝<span>Mësimdhënës</span></button>
                             <button type="button" class="login-role-tab" data-role="admin" onclick="setLoginRole('admin')">👨‍💼<span>Administrator</span></button>
                             <button type="button" class="login-role-tab" data-role="prind" style="display:none;" onclick="setLoginRole('prind')">👪<span>Prind</span></button>
@@ -1614,7 +1614,7 @@
                 <div class="user-info">
                     <div>
                         <div>SHFMU "EMIN DURAKU" KACANIK</div>
-                        <div>Viti: <span id="schoolYearDisplay">2025-2026</span> | <span id="userNameDisplay">👨‍🏫 KUJDESTARI</span></div>
+                        <div>Viti: <span id="schoolYearDisplay">2025-2026</span> | <span id="userNameDisplay">👨‍🏫 MËSUESI/JA</span></div>
                         <div id="principalDisplay" style="font-size:12px; opacity:0.8;"></div>
                         <div id="offlineStatusDisplay" class="teacher-data-status offline" style="display: none;">📱 Të dhënat offline: të ruajtura lokalisht</div>
                     </div>
@@ -1634,11 +1634,11 @@
     <div id="teacherModal" class="modal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeTeacherModal()">×</button>
-            <h2 id="teacherModalTitle" style="color:#0b4b6e; margin-bottom:20px;">Shto Kujdestar</h2>
+            <h2 id="teacherModalTitle" style="color:#0b4b6e; margin-bottom:20px;">Shto Mësues/e</h2>
             <div class="form-group"><label>Emri i plote</label><input type="text" id="teacherName" placeholder="Shkruani emrin"></div>
             <div class="form-group"><label>Emri i perdoruesit</label><input type="text" id="teacherUsername" placeholder="p.sh. kujdestari_ix1"></div>
             <div class="form-group"><label>Fjalekalimi</label><input type="text" id="teacherPassword" placeholder="Vendosni fjalekalimin"></div>
-            <div class="form-group"><label>Klasa e kujdestarisë (opsionale)</label><select id="teacherClass"></select>
+            <div class="form-group"><label>Klasa e mësuesit/es (opsionale)</label><select id="teacherClass"></select>
                 <div style="font-size:11px; color:#666; margin-top:4px;">Mësimdhënësit e lëndëve lëreni pa klasë. Lëndët që jep i caktoni te <strong>Mësimdhënësit → ✏️ Caktimet</strong>.</div></div>
             <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:20px;">
                 <button class="btn btn-primary" onclick="saveTeacher()">Ruaj</button>
@@ -1747,7 +1747,7 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeSubjectTeachersModal()">×</button>
             <h2 id="subjectTeachersTitle" style="color:#0b4b6e; margin-bottom:10px;">👨‍🏫 Mësimdhënësit e Lëndëve</h2>
-            <p style="font-size:13px; color:#666; margin-bottom:15px;">Zgjidh cili mësimdhënës e mëson secilën lëndë në këtë klasë. Nëse lihet "Kujdestari", nënkuptohet se vetë kujdestari e mëson atë lëndë. Kjo i duhet gjeneruesit të Orarit që të shmangë vendosjen e të njëjtit mësimdhënës në 2 klasa njëkohësisht.</p>
+            <p style="font-size:13px; color:#666; margin-bottom:15px;">Zgjidh cili mësimdhënës e mëson secilën lëndë në këtë klasë. Nëse lihet "Mësuesi/ja", nënkuptohet se vetë mësuesi/ja e mëson atë lëndë. Kjo i duhet gjeneruesit të Orarit që të shmangë vendosjen e të njëjtit mësimdhënës në 2 klasa njëkohësisht.</p>
             <div id="subjectTeachersListContainer"></div>
             <div class="print-btn-group no-print">
                 <button class="btn btn-warning" onclick="closeSubjectTeachersModal()">Mbyll</button>
@@ -1774,7 +1774,7 @@
         <div class="modal-content" style="max-width:1500px; width:95%;">
             <button class="modal-close" onclick="closeSmiaModal()">×</button>
             <h2 style="color:#0b4b6e; margin-bottom:10px;">📋 SMIA - Regjistri i Paraleleve</h2>
-            <p style="font-size:12px; color:#666; margin-bottom:10px;">Të dhëna që kërkon periodikisht sistemi SMIA (MASHT) - klasa/paralelja/kujdestari/numri i nxënësve plotësohen automatikisht; pjesa tjetër plotësohet një herë dhe ruhet për herë tjetër.</p>
+            <p style="font-size:12px; color:#666; margin-bottom:10px;">Të dhëna që kërkon periodikisht sistemi SMIA (MASHT) - klasa/paralelja/mësuesi/ja/numri i nxënësve plotësohen automatikisht; pjesa tjetër plotësohet një herë dhe ruhet për herë tjetër.</p>
             <select id="smiaClassSelect" onchange="renderSmiaClassView()" style="width:100%; padding:8px; font-size:14px; margin-bottom:10px;">
                 <option value="">-- Zgjidh klasën --</option>
             </select>
@@ -1961,7 +1961,7 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeTeacherRosterModal()">×</button>
             <h2 style="color:#0b4b6e; margin-bottom:10px;">👥 Lista e Mësimdhënësve</h2>
-            <p style="font-size:13px; color:#666; margin-bottom:15px;">Lista e plotë e stafit mësimor (kujdestarë + mësimdhënës lëndësh) - që të gjithë përdoren më pas te "🗂️ Mësimdhënësit e Lëndëve" për t'i caktuar te klasat.</p>
+            <p style="font-size:13px; color:#666; margin-bottom:15px;">Lista e plotë e stafit mësimor (mësues + mësimdhënës lëndësh) - që të gjithë përdoren më pas te "🗂️ Mësimdhënësit e Lëndëve" për t'i caktuar te klasat.</p>
             <button class="btn btn-success" onclick="addSubjectOnlyTeacher()" style="margin-bottom:12px;">➕ Shto Mësimdhënës</button>
             <button class="btn btn-info" onclick="openElectiveByActiveModal()" style="margin-bottom:12px;">🎯 Lënda Zgjedhore sipas Aktiveve</button>
             <button class="btn btn-warning" onclick="openSubjectsDiagnosticModal()" style="margin-bottom:12px;">🔍 Diagnostikimi i Lëndëve</button>
@@ -2108,8 +2108,8 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closePasswordModal()">×</button>
             <h2 style="color:#0b4b6e; margin-bottom:20px;">Ndrysho Fjalekalimin</h2>
-            <div class="form-group"><label>Lloji</label><select id="passwordTypeSelect" onchange="togglePasswordType()"><option value="teacher">Kujdestar</option><option value="admin">Administrator (admin)</option></select></div>
-            <div class="form-group" id="teacherSelectGroup"><label>Kujdestari</label><select id="passwordTeacherSelect"></select></div>
+            <div class="form-group"><label>Lloji</label><select id="passwordTypeSelect" onchange="togglePasswordType()"><option value="teacher">Mësues/e</option><option value="admin">Administrator (admin)</option></select></div>
+            <div class="form-group" id="teacherSelectGroup"><label>Mësuesi/ja</label><select id="passwordTeacherSelect"></select></div>
             <div class="form-group" id="adminPasswordGroup" style="display:none;"><label>Fjalekalimi i ri per admin</label><input type="text" id="adminNewPassword" placeholder="Vendosni fjalekalimin e ri per admin"></div>
             <div class="form-group"><label>Fjalekalimi i ri</label><input type="text" id="newPassword" placeholder="Vendosni fjalekalimin e ri"></div>
             <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:20px;">
@@ -2135,7 +2135,7 @@
         <div class="modal-content" style="max-width:450px;">
             <button class="modal-close" onclick="closeResetModal()">×</button>
             <h2 style="color:#c62828; margin-bottom:15px;">⚠️ Rivendosje e të Dhënave</h2>
-            <p style="margin-bottom:15px;">Ky veprim do të rivendosë të gjitha të dhënat në gjendjen fillestare (24 klasat me 20 nxënës secila dhe kujdestarët e paracaktuar).</p>
+            <p style="margin-bottom:15px;">Ky veprim do të rivendosë të gjitha të dhënat në gjendjen fillestare (24 klasat me 20 nxënës secila dhe mësuesit e paracaktuar).</p>
             <p style="margin-bottom:20px; color:#c62828; font-weight:bold;">Të dhënat aktuale do të humbasin! A jeni i sigurt?</p>
             <div style="display:flex; gap:10px; justify-content:center;">
                 <button class="btn btn-danger" onclick="confirmResetData()">Po, Rivendos</button>
@@ -2301,7 +2301,7 @@
         // Krijon NJË llogari të VËRTETË Firebase (email+fjalëkalim), për RAST TË VETËM (jo
         // migrim me shumicë si më poshtë) - përdoret kur ADMINI NDRYSHON username-in e një
         // mësimdhënësi EKZISTUES, që llogaria e re Firebase të krijohet AUTOMATIKISHT (përndryshe
-        // llogaria e VJETËR mbetet e lidhur me email-in e VJETËR, dhe kujdestari s'mund të hyjë më
+        // llogaria e VJETËR mbetet e lidhur me email-in e VJETËR, dhe mësuesi/ja s'mund të hyjë më
         // me username-in e ri - pikërisht defekti që e shkaktoi "Gabim në lidhje me serverin").
         function createFirebaseAuthForSingleTeacher(username, password, label) {
             if (!username || !password) return;
@@ -2392,7 +2392,7 @@
                     if (err.code === 'auth/email-already-in-use') {
                         // RREGULLIM I RËNDËSISHËM: "ekziston tashmë" NUK do të thotë fjalëkalimi
                         // përputhet - mund të jetë llogari E VJETËR, "e ngecur" (si rasti i
-                        // "kujdestari-vi4"). VERIFIKO duke provuar hyrjen me fjalëkalimin AKTUAL -
+                        // "mësuesi/ja-vi4"). VERIFIKO duke provuar hyrjen me fjalëkalimin AKTUAL -
                         // vetëm KËSHTU dimë me siguri nëse llogaria vërtet funksionon apo jo.
                         secondaryAuth.signInWithEmailAndPassword(acc.email, acc.password).then(function() {
                             results.push(acc.label + ': ℹ️ ekzistonte tashmë, VERIFIKUAR (funksionon)');
@@ -2400,7 +2400,7 @@
                         }).catch(function(verifyErr) {
                             // Llogaria ekziston POR fjalëkalimi s'përputhet - "e ngecur", duhet
                             // fshirë manualisht te Firebase Console (Authentication) dhe migrimi
-                            // rrijegur, ose t'i jepet username i ri (siç bëmë me kujdestari-vi4).
+                            // rrijegur, ose t'i jepet username i ri (siç bëmë me mësuesi/ja-vi4).
                             results.push(acc.label + ': ❌ LLOGARI E NGECUR (ekziston por fjalëkalimi s\'përputhet - ' + verifyErr.code + ')');
                             processNext(i + 1);
                         });
@@ -2709,7 +2709,7 @@
         // në cloud, fiton versioni lokal (sepse supozojmë se ai është ai që po ruhet tani).
         // Kjo parandalon që një ruajtje e një përdoruesi të FSHIJË punën e një përdoruesi tjetër.
         // RREGULLIM (24.9.2026): bashkimi (merge) i shtonte përsëri çdo element që ekzistonte
-        // ende në cloud ose te kopja e vjetër e një pajisjeje tjetër - prandaj kujdestari i
+        // ende në cloud ose te kopja e vjetër e një pajisjeje tjetër - prandaj mësuesi/ja i
         // fshirë "rikthehej". Tani çdo fshirje lë një shenjë (systemData.deletedIds) që
         // sinkronizohet me të gjithë, dhe elementet e shënuara nuk rikthehen më kurrë.
         function mergeById(localArr, remoteArr, deletedMap) {
@@ -3251,7 +3251,7 @@
                     try { localStorage.setItem('schoolSystemFinalV5_4', JSON.stringify(systemData)); } catch (e) {}
                     return;
                 }
-                // ⚡ kur disa kujdestarë ruajnë njëkohësisht, vijnë shumë njoftime radhazi - ekrani
+                // ⚡ kur disa mësues ruajnë njëkohësisht, vijnë shumë njoftime radhazi - ekrani
                 // rifreskohet vetëm një herë pasi të qetësohen (në vend të dhjetëra rifreskimeve)
                 if (window._rtRefreshTimer) clearTimeout(window._rtRefreshTimer);
                 window._rtRefreshTimer = setTimeout(function() {
@@ -3456,7 +3456,7 @@
                 return;
             }
 
-            // Kujdestarët
+            // Mësuesit
             var teacher = systemData.teachers.find(function(t) {
                 return t.username === u && t.password === p;
             });
@@ -3483,7 +3483,7 @@
                         }
 
                         if (teacher) {
-                            console.log("✅ Hyrje si Kujdestar (nga cloud):", teacher.name);
+                            console.log("✅ Hyrje si Mësues/e (nga cloud):", teacher.name);
                             currentUser = { id: teacher.id, name: teacher.name, role: 'teacher',
                             classId: teacher.classId };
                             showMainApp();
@@ -3503,7 +3503,7 @@
             }
 
             if (teacher) {
-                console.log("✅ Hyrje si Kujdestar:", teacher.name);
+                console.log("✅ Hyrje si Mësues/e:", teacher.name);
                 currentUser = { id: teacher.id, name: teacher.name, role: 'teacher', classId: teacher.classId };
                 showMainApp();
                 return;
@@ -3560,7 +3560,7 @@
 
         function requireTeacher() {
             if (!isTeacher() && !isAdmin()) {
-                showNotification("⛔ Ju lutemi identifikohuni si kujdestar ose admin!");
+                showNotification("⛔ Ju lutemi identifikohuni si mësues/e ose admin!");
                 return false;
             }
             return true;
@@ -3922,10 +3922,10 @@ if (systemData.classes && systemData.classes.length > 0) {
                 });
             }
 
-            html += '<h3 style="margin-top:20px;">👨‍🏫 TË GJITHË KUJDESTARËT</h3>';
+            html += '<h3 style="margin-top:20px;">👨‍🏫 TË GJITHË MËSUESIT</h3>';
             if (systemData.teachers.length === 0) {
                 html +=
-                    '<div style="padding:20px; text-align:center; background:#f8f9fa; border-radius:12px;">⚠️ Nuk ka kujdestarë të regjistruar. <br><button class="btn btn-admin" style="margin-top:10px;" onclick="openTeacherModal()">Shto Kujdestar të Ri</button></div>';
+                    '<div style="padding:20px; text-align:center; background:#f8f9fa; border-radius:12px;">⚠️ Nuk ka mësues të regjistruar. <br><button class="btn btn-admin" style="margin-top:10px;" onclick="openTeacherModal()">Shto Mësues/e të Ri</button></div>';
             } else {
                 getTeachersSortedByClass().forEach(function(t) {
                     var classObj = systemData.classes.find(function(c) { return c.id === t.classId; });
@@ -3956,10 +3956,10 @@ if (systemData.classes && systemData.classes.length > 0) {
             }, 300);
         }
 
-        // ==================== RENDITJA E KUJDESTARËVE SIPAS KLASËS (shtuar 22.9.2026) ====================
-        // Rendit kujdestarët sipas klasës që menaxhojnë: VI → VII → VIII → IX, dhe brenda
+        // ==================== RENDITJA E MËSUESVE SIPAS KLASËS (shtuar 22.9.2026) ====================
+        // Rendit mësuesit sipas klasës që menaxhojnë: VI → VII → VIII → IX, dhe brenda
         // secilës sipas paraleles (1, 2, 3...). Kupton edhe "IX-1", "9/1", "IX/2", "9-3" etj.
-        // Kujdestarët pa klasë dalin në fund. NUK e ndryshon renditjen e ruajtur në cloud -
+        // Mësuesit pa klasë dalin në fund. NUK e ndryshon renditjen e ruajtur në cloud -
         // kthen vetëm një kopje të renditur për shfaqje.
         function parseClassOrderKey(className) {
             var romans = { 'I':1,'II':2,'III':3,'IV':4,'V':5,'VI':6,'VII':7,'VIII':8,'IX':9,'X':10,'XI':11,'XII':12 };
@@ -4034,7 +4034,7 @@ if (systemData.classes && systemData.classes.length > 0) {
             if (isAdminViewing) {
                 adminViewWarning = '<div class="admin-view-warning">' +
                     '<span class="icon">👁️</span>' +
-                    '<span>Ju jeni duke parë panelin e kujdestarit si ADMINISTRATOR - <strong>NUK MUND TË BËNI NDRYSHIME</strong> (vetëm shikim)</span>' +
+                    '<span>Ju jeni duke parë panelin e mësuesit/es si ADMINISTRATOR - <strong>NUK MUND TË BËNI NDRYSHIME</strong> (vetëm shikim)</span>' +
                     '</div>';
             }
 
@@ -4458,13 +4458,13 @@ if (systemData.classes && systemData.classes.length > 0) {
         function openTeacherModal(id) {
             if (!requireAdmin()) return;
             var t = id ? systemData.teachers.find(function(t) { return t.id === id; }) : null;
-            document.getElementById('teacherModalTitle').innerText = t ? 'Ndrysho Mësimdhënësin' : 'Shto Kujdestar / Mësimdhënës';
+            document.getElementById('teacherModalTitle').innerText = t ? 'Ndrysho Mësimdhënësin' : 'Shto Mësues/e / Mësimdhënës';
             document.getElementById('teacherName').value = t ? t.name : '';
             document.getElementById('teacherUsername').value = t && t.username ? t.username : '';
             document.getElementById('teacherPassword').value = t && t.password ? t.password : '';
             window.editingTeacherId = t ? t.id : null;
             var sel = document.getElementById('teacherClass');
-            sel.innerHTML = '<option value="">-- Pa klasë kujdestarie (vetëm mësimdhënës) --</option>';
+            sel.innerHTML = '<option value="">-- Pa klasë (vetëm mësimdhënës) --</option>';
             systemData.classes.forEach(function(cls) {
                 sel.innerHTML += '<option value="' + cls.id + '" ' + (t && t.classId === cls.id ? 'selected' :
                     '') +
@@ -4507,18 +4507,18 @@ if (systemData.classes && systemData.classes.length > 0) {
                 if (t && normName(t.name) !== normName(name)) {
                     var nAsg = getTeacherAssignments(t.id).length;
                     if (nAsg > 0 && !confirm('⚠️ Po e ndryshoni emrin nga "' + t.name + '" në "' + name + '".\n\n' +
-                            '"' + t.name + '" ka ' + nAsg + ' klasa/lëndë në orar. Nëse "' + name + '" është PERSON TJETËR (p.sh. kujdestari i ri), ' +
-                            'këto orë do t\'i kalonin atij/asaj!\n\nPër të ndërruar kujdestarin përdorni butonin "👨‍🏫 Ndërro kujdestarin" - ai nuk i prek orët.\n\n' +
+                            '"' + t.name + '" ka ' + nAsg + ' klasa/lëndë në orar. Nëse "' + name + '" është PERSON TJETËR (p.sh. mësuesi/ja i ri), ' +
+                            'këto orë do t\'i kalonin atij/asaj!\n\nPër të ndërruar mësuesin/en përdorni butonin "👨‍🏫 Ndërro mësuesin/en" - ai nuk i prek orët.\n\n' +
                             'Shtypni OK VETËM nëse po korrigjoni emrin e të njëjtit person (p.sh. gabim shkrimi).')) return;
                 }
                 if (t) {
                     var oldClass = systemData.classes.find(function(c) { return c.id === t.classId; });
                     if (oldClass) oldClass.teacherId = null;
-                    // një klasë ka vetëm një kujdestar: kujdestarët e tjerë të së njëjtës klasë lirohen
+                    // një klasë ka vetëm një mësues/e: mësuesit e tjerë të së njëjtës klasë lirohen
                     if (classId) systemData.teachers.forEach(function(x) { if (x.id !== t.id && x.classId === classId) x.classId = null; });
 
                     // RREGULLIM: kur username-i NDRYSHON, llogaria E VJETËR Firebase mbetet e
-                    // lidhur me username-in e vjetër - pa këtë, kujdestari s'do të mund të hynte
+                    // lidhur me username-in e vjetër - pa këtë, mësuesi/ja s'do të mund të hynte
                     // më me username-in e ri (saktësisht defekti që shkaktoi "Gabim në server").
                     var usernameChanged = (t.username !== username);
                     var passwordChanged = (t.password !== password);
@@ -4587,7 +4587,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                 if (cls) cls.teacherId = newTeacher.id;
                 // llogaria e vërtetë Firebase krijohet menjëherë, që të mund të hyjë edhe në InPrivate
                 if (typeof createFirebaseAuthForSingleTeacher === 'function') createFirebaseAuthForSingleTeacher(username, password, name);
-                showNotification((cls ? "Kujdestari " : "Mësimdhënësi ") + name + " u krijua!");
+                showNotification((cls ? "Mësuesi/ja " : "Mësimdhënësi ") + name + " u krijua!");
             }
 
             saveToLocal();
@@ -4603,7 +4603,7 @@ if (systemData.classes && systemData.classes.length > 0) {
         function removeTeacher(id) {
             if (!requireAdmin()) return;
             var tt = systemData.teachers.find(function(t) { return t.id === id; });
-            if (confirm("Fshi " + (tt ? tt.name : "kujdestarin") + "?\n\nFshirja është e përhershme dhe vlen në të gjitha pajisjet.")) {
+            if (confirm("Fshi " + (tt ? tt.name : "mësuesin/en") + "?\n\nFshirja është e përhershme dhe vlen në të gjitha pajisjet.")) {
                 var t = tt;
                 if (t && t.classId) {
                     var c = systemData.classes.find(function(c) { return c.id === t.classId; });
@@ -4634,7 +4634,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                 systemData.teachers = systemData.teachers.filter(function(t) { return t.id !== id; });
                 saveToLocal();
                 refreshDisplay();
-                showNotification((t ? t.name : "Kujdestari") + " u fshi");
+                showNotification((t ? t.name : "Mësuesi/ja") + " u fshi");
             }
         }
 
@@ -7091,7 +7091,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                     activeId: cls.activeId,
                     activeName: active ? active.name : 'Pa aktiv',
                     teacherId: cls.teacherId,
-                    teacherName: teacher ? teacher.name : 'Pa kujdestar',
+                    teacherName: teacher ? teacher.name : 'Pa mësues/e',
                     students: JSON.parse(JSON.stringify(cls.students)),
                     subjectsOrder: cls.subjectsOrder ? cls.subjectsOrder.slice() : [],
                     schedule: cls.schedule ? JSON.parse(JSON.stringify(cls.schedule)) : null,
@@ -7123,8 +7123,8 @@ if (systemData.classes && systemData.classes.length > 0) {
             // (teacher.classId) pas promovimit - përndryshe mësimdhënësit "humbin" lidhjen me
             // klasën e tyre të re dhe s'mund të hyjnë më në panelin e tyre (defekti i 12.8.2026).
             var oldToNewClassId = {};
-            // Kujdestari i klasës IX që diplomohet "kthehet" automatikisht kujdestar i klasës
-            // së re VI me TË NJËJTIN numër (p.sh. kujdestari i IX-3 -> kujdestar i VI-3 i ri) -
+            // Mësuesi/ja IX që diplomohet "kthehet" automatikisht mësuesi/ja
+            // së re VI me TË NJËJTIN numër (p.sh. mësuesi/ja i IX-3 -> mësues/e i VI-3 i ri) -
             // praktika e zakonshme e ndjekjes së një grupi nxënësish nga VI deri IX.
             var graduatedTeacherIdByNumber = {};
             var graduatedClassIdByNumber = {};
@@ -7136,7 +7136,7 @@ if (systemData.classes && systemData.classes.length > 0) {
 
                 if (level === edLastLevel()) {
                     graduatedCount++;
-                    oldToNewClassId[cls.id] = null; // klasa u diplomua - s'ekziston më (rishikohet poshtë nëse kujdestari vazhdon te VI e re)
+                    oldToNewClassId[cls.id] = null; // klasa u diplomua - s'ekziston më (rishikohet poshtë nëse mësuesi/ja vazhdon te VI e re)
                     if (cls.teacherId) {
                         graduatedTeacherIdByNumber[number] = cls.teacherId;
                         graduatedClassIdByNumber[number] = cls.id;
@@ -7188,7 +7188,7 @@ if (systemData.classes && systemData.classes.length > 0) {
 
             for (var i = 1; i <= EDITION.parallels; i++) {
                 var newVITeacherId = graduatedTeacherIdByNumber[String(i)] || null;
-                // 20 rreshta bosh gati për t'u plotësuar (emra bosh) - kujdestari thjesht
+                // 20 rreshta bosh gati për t'u plotësuar (emra bosh) - mësuesi/ja thjesht
                 // shkruan emrat, pa pasur nevojë t'i shtojë nxënësit një nga një.
                 var blankStudents = [];
                 for (var s = 0; s < 20; s++) {
@@ -7210,7 +7210,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                 edApplyDefaultCurriculum(newVI);
                 var oldIxIdForThisNumber = graduatedClassIdByNumber[String(i)];
                 if (oldIxIdForThisNumber) {
-                    // Kujdestari i ish-IX-N ndjek klasën e re VI-N, jo më "pa klasë".
+                    // Mësuesi/ja i ish-IX-N ndjek klasën e re VI-N, jo më "pa klasë".
                     oldToNewClassId[oldIxIdForThisNumber] = newVI.id;
                 }
             }
@@ -7260,7 +7260,7 @@ if (systemData.classes && systemData.classes.length > 0) {
             showNotification('🆕 6 klasa të reja VI u krijuan nga cikli fillor');
             var rotatedCount = Object.keys(graduatedTeacherIdByNumber).length;
             if (rotatedCount > 0) {
-                showNotification('🔄 ' + rotatedCount + ' kujdestarë të ish-klasave IX u bënë automatikisht kujdestarë të klasave të reja VI me të njëjtin numër');
+                showNotification('🔄 ' + rotatedCount + ' mësues të ish-klasave IX u bënë automatikisht mësues të klasave të reja VI me të njëjtin numër');
             }
             // Përdorim forcePushToCloud (ZËVENDËSIM I PLOTË, jo bashkim) - njësoj si te Restauro/
             // Undo, që klasat/mësimdhënësit e sapopromovuar të mos "përzihen" gabimisht me
@@ -7351,7 +7351,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                     '<span style="background:#e8f5e9; padding:4px 12px; border-radius:12px; font-size:12px; margin-left:8px;">' +
                     totalStudents + ' nxënës</span>' +
                     '<span style="background:#fff3e0; padding:4px 12px; border-radius:12px; font-size:12px; margin-left:8px;">' +
-                    totalTeachers + ' kujdestarë</span>' +
+                    totalTeachers + ' mësues</span>' +
                     '<button class="btn btn-info" onclick="viewYearDetail(' + systemData.archivedYears.indexOf(yearData) +
                     ')" style="margin-left:8px;">👁️ Shiko</button>' +
                     '<button class="btn btn-primary" onclick="exportYearArchive(' + systemData.archivedYears.indexOf(yearData) +
@@ -7615,7 +7615,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                 '</div>' +
                 '<div class="signatures">' +
                 '<div class="signature">' +
-                '<div class="signature-line">Kujdestari</div>' +
+                '<div class="signature-line">Mësuesi/ja</div>' +
                 '<div style="margin-top:2mm; font-size:12px;">' + teacherName + '</div>' +
                 '</div>' +
                 '<div class="signature">' +
@@ -7789,7 +7789,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                     '</div>' +
                     '<div class="signatures">' +
                     '<div class="signature">' +
-                    '<div class="signature-line">Kujdestari</div>' +
+                    '<div class="signature-line">Mësuesi/ja</div>' +
                     '<div style="margin-top:2mm; font-size:11px;">' + teacherName + '</div>' +
                     '</div>' +
                     '<div class="signature">' +
@@ -9132,7 +9132,7 @@ if (systemData.classes && systemData.classes.length > 0) {
 
         // ==================== SMIA - REGJISTRI I PARALELEVE ====================
         // Sistemi SMIA (Sistemi i Menaxhimit të Informatave në Arsim, MASHT) kërkon periodikisht
-        // nga shkollat një grup specifik të dhënash - për klasë (kujdestari, profili, gjuha e
+        // nga shkollat një grup specifik të dhënash - për klasë (mësuesi/ja, profili, gjuha e
         // dytë, klasë e kombinuar, klasë me nevoja të veçanta) dhe për SECILIN nxënës (mosha,
         // etnia, largësia e udhëtimit, lloji i dëmtimit, gjendja familjare, ndihma sociale, i
         // ri/përsëritës, të ardhur nga jashtë). Ruhen NDARA (systemData.smiaClassData /
@@ -9149,7 +9149,7 @@ if (systemData.classes && systemData.classes.length > 0) {
             'Dëmtim fizik/lëvizor', 'Dëmtim intelektual', 'Autizëm', 'Kombinim dëmtimesh', 'Tjetër'
         ];
         var SMIA_FAMILY_OPTIONS = ['Të dy prindërit', 'Vetëm nëna', 'Vetëm babai', 'Jetim',
-            'Kujdestar/i afërm tjetër'
+            'Mësues/e/i afërm tjetër'
         ];
         var SMIA_YESNO_OPTIONS = ['Jo', 'Po'];
 
@@ -9198,18 +9198,18 @@ if (systemData.classes && systemData.classes.length > 0) {
                     html += '<option value="' + c.id + '">' + escapeHtml(c.className) + '</option>';
                 });
             } else {
-                // Kujdestari sheh VETËM klasën e vet - jo listën e plotë.
+                // Mësuesi/ja sheh VETËM klasën e vet - jo listën e plotë.
                 var myClass = getCurrentClass();
                 if (myClass) {
                     html = '<option value="' + myClass.id + '">' + escapeHtml(myClass.className) + '</option>';
                 } else {
-                    html = '<option value="">Ende s\'je i caktuar si kujdestar i asnjë klase.</option>';
+                    html = '<option value="">Ende s\'je i caktuar si mësues/e i asnjë klase.</option>';
                 }
             }
             select.innerHTML = html;
             document.getElementById('smiaContentContainer').innerHTML = '';
             showModal('smiaModal');
-            // Kujdestari e ka VETËM NJË opsion - hape direkt pamjen, pa e detyruar të zgjedhë vetë.
+            // Mësuesi/ja e ka VETËM NJË opsion - hape direkt pamjen, pa e detyruar të zgjedhë vetë.
             if (!isAdmin() && select.value) renderSmiaClassView();
         }
         function closeSmiaModal() {
@@ -9233,7 +9233,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                 '<table style="width:100%; margin-top:8px; font-size:13px;">' +
                 '<tr><td style="padding:4px; font-weight:bold;">Klasa</td><td style="padding:4px;">' + escapeHtml(classNameParts[0]) + '</td>' +
                 '<td style="padding:4px; font-weight:bold;">Paralelja</td><td style="padding:4px;">' + escapeHtml(classNameParts[1] || '') + '</td></tr>' +
-                '<tr><td style="padding:4px; font-weight:bold;">Kujdestari</td><td style="padding:4px;" colspan="3">' + (homeroom ? escapeHtml(homeroom.name) : '⚠️ I pacaktuar') + '</td></tr>' +
+                '<tr><td style="padding:4px; font-weight:bold;">Mësuesi/ja</td><td style="padding:4px;" colspan="3">' + (homeroom ? escapeHtml(homeroom.name) : '⚠️ I pacaktuar') + '</td></tr>' +
                 '<tr><td style="padding:4px; font-weight:bold;">Numri i nxënësve</td><td style="padding:4px;" colspan="3">' + cls.students.length + ' (M: ' + males + ' | F: ' + females + ')</td></tr>' +
                 '</table>' +
                 '<div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">' +
@@ -9496,7 +9496,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                 '<style>body{font-family:Arial; font-size:12px;} table{width:100%; border-collapse:collapse; margin-bottom:15px;} th,td{border:1px solid #333; padding:5px; text-align:center;} h2{text-align:center;}</style></head><body>' +
                 '<h2>Regjistri i paraleleve - ' + (systemData.schoolInfo ? escapeHtml(systemData.schoolInfo.year || '') : '') + '</h2>' +
                 '<table><tr><th>Klasa</th><td>' + escapeHtml(classNameParts[0]) + '</td><th>Paralelja</th><td>' + escapeHtml(classNameParts[1] || '') + '</td></tr>' +
-                '<tr><th>Kujdestari i klasës</th><td colspan="3">' + (homeroom ? escapeHtml(homeroom.name) : '') + '</td></tr>' +
+                '<tr><th>Mësuesi/ja</th><td colspan="3">' + (homeroom ? escapeHtml(homeroom.name) : '') + '</td></tr>' +
                 '<tr><th>Profili shkollor (Drejtimi)</th><td>' + escapeHtml(smiaClass.profiliShkollor) + '</td><th>Gjuhë e dytë e huaj</th><td>' + escapeHtml(smiaClass.gjuhaDyte) + '</td></tr>' +
                 '<tr><th>Ndërrimi i paraleles</th><td colspan="3">' + escapeHtml(getSmiaShiftLabel(cls, smiaClass)) + '</td></tr>' +
                 '<tr><th>Klasë e kombinuar</th><td>' + (smiaClass.klaseKombinuar ? 'Po' : 'Jo') + '</td><th>Klasë me nevoja të veçanta</th><td>' + (smiaClass.klaseNevojaVeçanta ? 'Po' : 'Jo') + '</td></tr>' +
@@ -10452,13 +10452,13 @@ if (systemData.classes && systemData.classes.length > 0) {
         }
 
         // ==================== MËSIMDHËNËSIT SIPAS LËNDËVE (për gjeneratorin e plotë të Orarit) ====================
-        // systemData.subjectTeachers[classId][subjectKey] = teacherId (ose mungon/null = vetë kujdestari).
+        // systemData.subjectTeachers[classId][subjectKey] = teacherId (ose mungon/null = vetë mësuesi/ja).
         // Kjo lejon që një mësimdhënës "specialist" (p.sh. i Anglishtes) të mësojë të njëjtën lëndë
         // në disa klasa, dhe gjeneruesi i Orarit të shmangë ta vendosë në 2 klasa njëkohësisht.
-        // RREGULLIM: më parë kthente automatikisht kujdestarin e klasës si "parazgjedhje e
-        // fshehur" për çdo lëndë të pa-caktuar - por kujdestarët duhet të trajtohen si çdo
+        // RREGULLIM: më parë kthente automatikisht mësuesin/en e klasës si "parazgjedhje e
+        // fshehur" për çdo lëndë të pa-caktuar - por mësuesit duhet të trajtohen si çdo
         // mësimdhënës tjetër (asnjë supozim automatik). Tani kthen null nëse s'ka caktim TË
-        // QARTË - admini duhet ta caktojë çdo lëndë-klasë shprehimisht, edhe për kujdestarin.
+        // QARTË - admini duhet ta caktojë çdo lëndë-klasë shprehimisht, edhe për mësuesin/en.
         function getSubjectTeacherId(classId, subjectKey) {
             if (systemData.subjectTeachers && systemData.subjectTeachers[classId] &&
                 systemData.subjectTeachers[classId][subjectKey]) {
@@ -11265,8 +11265,8 @@ if (systemData.classes && systemData.classes.length > 0) {
             var homeroomClass = systemData.classes.find(function(c) { return c.teacherId === teacherId; });
             var warning = "A je i sigurt që dëshiron ta heqësh " + t.name + " nga lista e mësimdhënësve?";
             if (homeroomClass) {
-                warning += "\n\n⚠️ Kujdes: " + t.name + " është kujdestar i klasës " + homeroomClass.className +
-                    " - klasa do të mbetet PA kujdestar nëse vazhdon.";
+                warning += "\n\n⚠️ Kujdes: " + t.name + " është mësuesi/ja " + homeroomClass.className +
+                    " - klasa do të mbetet PA mësues/e nëse vazhdon.";
             }
             if (!confirm(warning)) return;
             markDeleted('teachers', teacherId);
@@ -11296,7 +11296,7 @@ if (systemData.classes && systemData.classes.length > 0) {
         }
 
         // Mësimdhënës "vetëm për lëndë" - PA username/fjalëkalim, sepse nuk kanë nevojë të hyjnë
-        // vetë në sistem (kujdestari i klasës është ai që fut notat). Përdoren vetëm si etiketë
+        // vetë në sistem (mësuesi/ja është ai që fut notat). Përdoren vetëm si etiketë
         // referimi për "kush e mëson cilën lëndë" (Orari, shmangie konfliktesh).
         // Shton një lëndë të re GLOBALE - shfaqet për t'u zgjedhur te menuja "Lënda" për të
         // gjithë mësimdhënësit, dhe shtohet te subjectsOrder e ÇDO klase (vetëm nëse s'e ka
@@ -11569,8 +11569,8 @@ if (systemData.classes && systemData.classes.length > 0) {
         }
 
         // Riemërtim i thjeshtë - PA e detyruar zgjedhjen e nj klase (ndryshe nga openTeacherModal,
-        // i cili është ndërtuar posaçërisht për KUJDESTARË dhe kërkon klasë detyrimisht) - i
-        // përshtatshëm për çdo mësimdhënës, qofte kujdestar apo vetëm mësimdhënës lënde.
+        // i cili është ndërtuar posaçërisht për MËSUES dhe kërkon klasë detyrimisht) - i
+        // përshtatshëm për çdo mësimdhënës, qofte mësues/e apo vetëm mësimdhënës lënde.
         function renameTeacherSimple(id) {
             if (!requireAdmin()) return;
             var t = systemData.teachers.find(function(tt) { return tt.id === id; });
@@ -11630,7 +11630,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                     var homeroom = systemData.teachers.find(function(t) { return t.id === classObj.teacherId; });
                     html += '<div style="margin-bottom:8px; border:1px solid #cfd8e3; border-radius:8px; overflow:hidden;">' +
                         '<div onclick="toggleAllSubjTeachersClass(this)" style="cursor:pointer; padding:8px 12px; background:#e3eaf2; font-size:13px; font-weight:bold; color:#0b4b6e; display:flex; justify-content:space-between; align-items:center;">' +
-                        '<span>' + escapeHtml(classObj.className) + ' <span style="font-weight:normal; color:#666;">(kujdestar: ' + (homeroom ? escapeHtml(homeroom.name) : 'i pacaktuar') + ')</span></span>' +
+                        '<span>' + escapeHtml(classObj.className) + ' <span style="font-weight:normal; color:#666;">(mësues/e: ' + (homeroom ? escapeHtml(homeroom.name) : 'i pacaktuar') + ')</span></span>' +
                         '<span class="all-subj-arrow">▶</span></div>' +
                         '<div class="all-subj-body" style="display:none; padding:8px 12px;">' +
                         '<table style="width:100%; border-collapse:collapse; font-size:13px;">' +
@@ -11642,7 +11642,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                             '<option value="">-- Pa mësimdhënës --</option>';
                         systemData.teachers.forEach(function(t) {
                             var selected = (t.id === assignedId) ? 'selected' : '';
-                            html += '<option value="' + t.id + '" ' + selected + '>' + escapeHtml(t.name) + (t.id === classObj.teacherId ? ' (kujdestar)' : '') + '</option>';
+                            html += '<option value="' + t.id + '" ' + selected + '>' + escapeHtml(t.name) + (t.id === classObj.teacherId ? ' (mësues/e)' : '') + '</option>';
                         });
                         html += '</select></td></tr>';
                     });
@@ -11692,7 +11692,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                     '<option value="">-- Pa mësimdhënës --</option>';
                 systemData.teachers.forEach(function(t) {
                     var selected = (t.id === assignedId) ? 'selected' : '';
-                    html += '<option value="' + t.id + '" ' + selected + '>' + escapeHtml(t.name) + (t.id === classObj.teacherId ? ' (kujdestar)' : '') + '</option>';
+                    html += '<option value="' + t.id + '" ' + selected + '>' + escapeHtml(t.name) + (t.id === classObj.teacherId ? ' (mësues/e)' : '') + '</option>';
                 });
                 html += '</select></td></tr>';
             });
@@ -13377,13 +13377,13 @@ if (systemData.classes && systemData.classes.length > 0) {
                 });
                 html += '</select>';
             } else {
-                // Kujdestari sheh VETËM klasën e vet - jo listën e plotë.
+                // Mësuesi/ja sheh VETËM klasën e vet - jo listën e plotë.
                 var myClass = getCurrentClass();
                 if (myClass) {
                     html = '<select id="singleClassScheduleSelect" onchange="renderSingleClassSchedule()" style="width:100%; padding:8px; font-size:14px;">' +
                         '<option value="' + myClass.id + '">' + escapeHtml(myClass.className) + '</option></select>';
                 } else {
-                    html = '<p style="color:#c62828;">Ende s\'je i caktuar si kujdestar i asnjë klase.</p>';
+                    html = '<p style="color:#c62828;">Ende s\'je i caktuar si mësues/e i asnjë klase.</p>';
                 }
             }
             container.innerHTML = html;
@@ -13692,7 +13692,7 @@ if (systemData.classes && systemData.classes.length > 0) {
         function openPasswordModal() {
             if (!requireAdmin()) return;
             var select = document.getElementById('passwordTeacherSelect');
-            select.innerHTML = '<option value="">-- Zgjidhni kujdestarin --</option>';
+            select.innerHTML = '<option value="">-- Zgjidhni mësuesin/en --</option>';
             getTeachersSortedByClass().forEach(function(t) {
                 if (!t.username) return; // pa emër përdoruesi s'ka fjalëkalim për t'u ndryshuar
                 select.innerHTML += '<option value="' + t.id + '">' + t.name + ' (' + t.username +
@@ -13759,7 +13759,7 @@ if (systemData.classes && systemData.classes.length > 0) {
             } else {
                 var teacherId = document.getElementById('passwordTeacherSelect').value;
                 var newPass = document.getElementById('newPassword').value.trim();
-                if (!teacherId) { alert("Zgjidhni kujdestarin!"); return; }
+                if (!teacherId) { alert("Zgjidhni mësuesin/en!"); return; }
                 if (!newPass) { alert("Vendosni fjalëkalimin e ri!"); return; }
                 var teacher = systemData.teachers.find(function(t) { return t.id === teacherId; });
                 if (teacher) {
@@ -14270,7 +14270,7 @@ if (systemData.classes && systemData.classes.length > 0) {
             win.print();
         }
 
-        // ==================== FUNKSIONET PËR KUJDESTARËT ====================
+        // ==================== FUNKSIONET PËR MËSUESIT ====================
         function openTeacherSubjectsModal() {
             if (!requireTeacher()) return;
             var classObj = getCurrentClass();
@@ -14713,7 +14713,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                 ' (M/A:' + stats
                 .totalWR + ', M/PA:' + stats.totalWOR + ')</div>';
             printHtml +=
-                '<div class="signature-line"><div class="signature"><div style="border-top:1px solid #333;margin-top:5mm;padding-top:1mm;width:140px;">Kujdestari: ' +
+                '<div class="signature-line"><div class="signature"><div style="border-top:1px solid #333;margin-top:5mm;padding-top:1mm;width:140px;">Mësuesi/ja: ' +
                 (teacher ? teacher.name : '_______________') + '</div></div>';
             printHtml +=
                 '<div class="signature"><div style="border-top:1px solid #333;margin-top:5mm;padding-top:1mm;width:140px;">' + principalTitle() + ': ' +
@@ -14812,7 +14812,7 @@ if (systemData.classes && systemData.classes.length > 0) {
             printHtml += '<span><strong>📊 Gjithsej: ' + abs.total + '</strong></span></div></div>';
             printHtml += '<div class="certificate-signatures">';
             printHtml +=
-                '<div class="certificate-signature"><div class="certificate-signature-line">Kujdestari</div><div style="font-size:15px; margin-top:2mm;">' +
+                '<div class="certificate-signature"><div class="certificate-signature-line">Mësuesi/ja</div><div style="font-size:15px; margin-top:2mm;">' +
                 escapeHtml(teacherName) + '</div></div>';
             printHtml +=
                 '<div class="certificate-signature"><div class="certificate-signature-line">' + principalTitle() + '</div><div style="font-size:18px; margin-top:2mm;">' +
@@ -14908,7 +14908,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                 allHtml += '<span><strong>📊 Gjithsej: ' + abs.total + '</strong></span></div></div>';
                 allHtml += '<div class="certificate-signatures">';
                 allHtml +=
-                    '<div class="certificate-signature"><div class="certificate-signature-line">Kujdestari</div><div style="font-size:18px; margin-top:2mm;">' +
+                    '<div class="certificate-signature"><div class="certificate-signature-line">Mësuesi/ja</div><div style="font-size:18px; margin-top:2mm;">' +
                     teacherName + '</div></div>';
                 allHtml +=
                     '<div class="certificate-signature"><div class="certificate-signature-line">' + principalTitle() + '</div><div style="font-size:18px; margin-top:2mm;">' +
@@ -15635,7 +15635,7 @@ if (systemData.classes && systemData.classes.length > 0) {
             printHtml +=
                 '<div style="margin-top: 3mm; padding: 2mm 3mm; font-size: 11px; background: #f5f5f5; border-radius: 4px; border: 1px solid #ddd; display: flex; flex-wrap: wrap; justify-content: space-between;">' +
                 '<div><strong>🏫 KLASA:</strong> ' + classObj.className + '</div>' +
-                '<div><strong>👨‍🏫 KUJDESTARI:</strong> ' + teacherName + '</div>' +
+                '<div><strong>👨‍🏫 MËSUESI/JA:</strong> ' + teacherName + '</div>' +
                 '<div><strong>👨‍🎓 TOTALI NXËNËSVE:</strong> ' + totalStudents + '</div>' +
                 '<div><strong>🧑 MESHKUJ:</strong> ' + maleCount + ' | <strong>👩 FEMRA:</strong> ' +
                 femaleCount + '</div>' +
@@ -15643,7 +15643,7 @@ if (systemData.classes && systemData.classes.length > 0) {
 
             printHtml += '<div class="footer">' +
                 '<div class="signature">' +
-                '<div class="signature-line">Kujdestari</div>' +
+                '<div class="signature-line">Mësuesi/ja</div>' +
                 '<div style="margin-top: 3mm;">' + teacherName + '</div>' +
                 '</div>' +
                 '<div class="signature">' +
@@ -15908,7 +15908,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                 '</table>' +
                 '<div class="footer">' +
                 '<div class="signature">' +
-                '<div class="signature-line">Kujdestari</div>' +
+                '<div class="signature-line">Mësuesi/ja</div>' +
                 '<div style="margin-top:2mm;">' + teacherName + '</div>' +
                 '</div>' +
                 '<div class="signature">' +
@@ -16240,7 +16240,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                     '</div>' +
                     '<div class="signatures">' +
                     '<div class="signature">' +
-                    '<div class="signature-line">Kujdestari</div>' +
+                    '<div class="signature-line">Mësuesi/ja</div>' +
                     '<div style="margin-top:2mm; font-size:18px;">' + teacherName + '</div>' +
                     '</div>' +
                     '<div class="signature">' +
@@ -16305,7 +16305,7 @@ if (systemData.classes && systemData.classes.length > 0) {
         // parë ose i fundit i vitit (rast rezervë - p.sh. gjatë verës).
         // 🗓️ PERIUDHA E RAPORTIMIT (1.10.2026): muaji "aktual" i raportit ndërrohet më datën 15.
         // Shtatori: 1 shtator - 15 tetor; tetori: 16 tetor - 15 nëntor; nëntori: 16 nëntor - 15 dhjetor ...
-        // Kështu kujdestarët e plotësojnë muajin pasi të ketë kaluar, deri më 15 të muajit vijues.
+        // Kështu mësuesit e plotësojnë muajin pasi të ketë kaluar, deri më 15 të muajit vijues.
         var REPORT_SWITCH_DAY = 15;
         // Qershori (muaji i fundit) nis më herët - më 5 qershor - sepse mësimi mbaron në mes të qershorit;
         // pra maji: 16 maj - 4 qershor, qershori: 5 qershor - 15 korrik.
@@ -16367,10 +16367,10 @@ if (systemData.classes && systemData.classes.length > 0) {
             var m = getSchoolMonths().find(function(x) { return x.key === mk; });
             if (window.tabelariData.openMonths[mk]) {
                 delete window.tabelariData.openMonths[mk];
-                showNotification('🔒 ' + (m ? m.label : mk) + ' u mbyll - kujdestarët s\'mund ta ndryshojnë më.');
+                showNotification('🔒 ' + (m ? m.label : mk) + ' u mbyll - mësuesit s\'mund ta ndryshojnë më.');
             } else {
                 window.tabelariData.openMonths[mk] = { by: getAdminName(), at: new Date().toISOString() };
-                showNotification('🔓 ' + (m ? m.label : mk) + ' u hap - kujdestarët mund ta plotësojnë/korrigjojnë.');
+                showNotification('🔓 ' + (m ? m.label : mk) + ' u hap - mësuesit mund ta plotësojnë/korrigjojnë.');
             }
             window.tabelariData.lastUpdated = new Date().toISOString();
             saveTabelariToLocal();
@@ -16542,7 +16542,7 @@ if (systemData.classes && systemData.classes.length > 0) {
         }
 
         // RREGULLIM (1.10.2026): më parë çdo ruajtje dërgonte në cloud TË GJITHË raportin e
-        // pajisjes - kështu kujdestari me kopje të vjetër i fshinte shënimet e kujdestarëve të tjerë
+        // pajisjes - kështu mësuesi/ja me kopje të vjetër i fshinte shënimet e mësuesve të tjerë
         // (dhe administratori nuk i shihte). Tani dërgohen VETËM muajt e klasave që janë ndryshuar
         // në këtë pajisje, dhe ndryshimet e të tjerëve vijnë në kohë reale.
         window._tabBase = window._tabBase || null;
@@ -16724,7 +16724,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                     var grace = tabelariInGrace(m.key) && !(window.tabelariData.openMonths && window.tabelariData.openMonths[m.key]);
                     html += '<button class="btn ' + (active ? 'btn-primary' : (open ? 'btn-success' : 'btn-info')) + '" style="padding:5px 10px; font-size:11px; margin:2px;" onclick="switchTabelariPeriod(\'' + p2 + '\')" title="' + (open ? 'I hapur për plotësim' : 'I mbyllur - vetëm lexim') + '">' +
                         m.label + ' ' + (open ? '🔓' : '🔒') + (grace ? ' <small>(deri ' + asmtFmt(tabelariMonthDeadline(m.key)).slice(0, 5) + ')</small>' : '') + '</button>';
-                    if (isAdmin() && !grace) html += '<button class="btn btn-warning" style="padding:3px 7px; font-size:10px; margin:2px 6px 2px -2px;" onclick="tabelariToggleMonthOpen(\'' + m.key + '\')" title="' + (open ? 'Mbylle muajin' : 'Hape muajin që kujdestarët ta plotësojnë') + '">' + (open ? 'Mbyll' : 'Hap') + '</button>';
+                    if (isAdmin() && !grace) html += '<button class="btn btn-warning" style="padding:3px 7px; font-size:10px; margin:2px 6px 2px -2px;" onclick="tabelariToggleMonthOpen(\'' + m.key + '\')" title="' + (open ? 'Mbylle muajin' : 'Hape muajin që mësuesit ta plotësojnë') + '">' + (open ? 'Mbyll' : 'Hap') + '</button>';
                 });
                 html += '</div>';
             }
@@ -16737,7 +16737,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                 var mk2 = window.tabelariViewPeriod.slice(6);
                 html += tabelariMonthOpen(mk2) || isAdmin() ?
                     '<div style="font-size:11px; color:#2e7d32; margin-top:4px;">✏️ Po plotësoni muajin <b>' + getPeriodLabel(window.tabelariViewPeriod) + '</b>' +
-                    (isAdmin() && !tabelariMonthOpen(mk2) ? ' (si administrator - për kujdestarët muaji është i mbyllur)' :
+                    (isAdmin() && !tabelariMonthOpen(mk2) ? ' (si administrator - për mësuesit muaji është i mbyllur)' :
                         (tabelariInGrace(mk2) && !(window.tabelariData.openMonths && window.tabelariData.openMonths[mk2]) ? ' - afati i plotësimit: deri më ' + asmtFmt(tabelariMonthDeadline(mk2)) : ' - muaji është i hapur nga administratori')) + '.</div>' :
                     '<div style="font-size:11px; color:#e65100; margin-top:4px;">🔒 Afati i plotësimit (' + asmtFmt(tabelariMonthDeadline(mk2)) + ') ka kaluar - vetëm lexim. Për ta plotësuar me vonesë, kërkojini administratorit ta hapë.</div>';
             } else if (window.tabelariViewPeriod !== 'current-month') {
@@ -16758,7 +16758,7 @@ if (systemData.classes && systemData.classes.length > 0) {
             var savedScrollTop = scrollContainer.scrollTop;
             var period = window.tabelariViewPeriod;
             var singleMonth = isSingleMonthPeriod(period);
-            // pas afatit të muajit të fundit (15 korrik) edhe "muaji aktual" mbyllet për kujdestarët
+            // pas afatit të muajit të fundit (15 korrik) edhe "muaji aktual" mbyllet për mësuesit
             var curOpen = isAdmin() || new Date() <= tabelariMonthDeadline(getCurrentSchoolMonthKey()) || tabelariMonthOpen(getCurrentSchoolMonthKey());
             var isEditablePeriod = (period === 'current-month' && curOpen) || (singleMonth && (isAdmin() || tabelariMonthOpen(period.slice(6))));
             if (normalizeTabelariDefaults()) { saveTabelariToLocal(); syncTabelariToCloud(); }
@@ -16805,7 +16805,7 @@ if (systemData.classes && systemData.classes.length > 0) {
             for (var nivel in nivelet) {
                 var nivelTotal = nivelTotals[nivel];
                 var klasat = nivelet[nivel];
-                // RREGULLIM: kujdestari sheh VETËM rreshtin e klasës së vet (jo gjithë listën) -
+                // RREGULLIM: mësuesi/ja sheh VETËM rreshtin e klasës së vet (jo gjithë listën) -
                 // kjo e zgjidh njëherë e mirë edhe problemin e lëvizjes (scroll) që kthehej në
                 // krye, pasi tani s'ka fare çka të lëvizësh - një rresht i vetëm. Admini vazhdon
                 // të shohë gjithçka, si më parë.
@@ -16850,19 +16850,19 @@ if (systemData.classes && systemData.classes.length > 0) {
                     var classObj = systemData.classes.find(function(c) { return c.className === cls; });
                     if (classObj) { studentCount = classObj.students.length; }
 
-                    // RREGULLIM: kujdestari mund të ndryshojë VETËM rreshtin e klasës së vet -
+                    // RREGULLIM: mësuesi/ja mund të ndryshojë VETËM rreshtin e klasës së vet -
                     // klasat e tjera i sheh, por s'mund t'i redaktojë (mbeten tekst, jo input).
                     // Admini vazhdon të ketë qasje të plotë, si më parë.
                     var isMyOwnClass = isAdmin() || (isTeacher() && getCurrentClass() && getCurrentClass().className === cls);
                     var isEditable = isEditablePeriod && isMyOwnClass;
 
                     html += '<tr style="border-bottom:1px solid #e2e8f0;">';
-                    // 👨‍🏫 emri i kujdestarit - vetëm në ekran (printimi ndërtohet veçmas dhe s'e përfshin)
+                    // 👨‍🏫 emri i mësuesit/es - vetëm në ekran (printimi ndërtohet veçmas dhe s'e përfshin)
                     var _hrCls = systemData.classes.find(function(c) { return c.className === cls; });
                     var _hrT = _hrCls && systemData.teachers.find(function(t) { return t.classId === _hrCls.id; });
                     html += '<td style="background:#f4f9fe; font-weight:bold; padding:6px 6px; line-height:1.2;">' + cls +
                         '<div class="no-print" style="font-size:10.5px; font-weight:normal; color:' + (_hrT ? '#555' : '#c62828') + '; white-space:nowrap;">' +
-                        (_hrT ? '👨‍🏫 ' + escapeHtml(_hrT.name) : '— pa kujdestar —') + '</div></td>';
+                        (_hrT ? '👨‍🏫 ' + escapeHtml(_hrT.name) : '— pa mësues/e —') + '</div></td>';
                     html += '<td style="text-align:center; background:#f9f9f9;">' + studentCount +
                     '</td>';
                     function cellHtml(field, val, width) {
@@ -17589,7 +17589,7 @@ if (systemData.classes && systemData.classes.length > 0) {
                 '<thead><tr><th rowspan="2">KLASA</th><th rowspan="2">Nr. nx.</th><th colspan="4">MUNGESAT E NXËNËSVE</th><th colspan="4">PLANIFIKIMI I ORËVE</th><th colspan="3">NXËNËS ME VËREJTJE</th></tr>' +
                 '<tr><th>Me arsye</th><th>Pa arsye</th><th>Gjithsej</th><th>Mes./nx</th><th>Planifikuara</th><th>Mbajtura</th><th>Humbura</th><th>Gjithsej</th><th>Mungesë disipl.</th><th>Masë disipl.</th><th>Të tjera</th></tr></thead>' +
                 '<tbody>' + bodyRows + '</tbody></table>' +
-                '<div class="sign"><div>Kujdestari / Përpiluesi</div><div>V.V.</div><div>' + principalTitle() + ': ' + escapeHtml(info.principal || '') + '</div></div>';
+                '<div class="sign"><div>Mësuesi/ja / Përpiluesi</div><div>V.V.</div><div>' + principalTitle() + ': ' + escapeHtml(info.principal || '') + '</div></div>';
             var css = function(p) {   // p = parashtesa e stileve ('' për printim, '#tabPdf ' për PDF)
                 return p + '.head{text-align:center; margin-bottom:6px;}' + p + '.head h2{margin:0; font-size:17px;}' + p + '.head p{margin:2px 0; font-size:12px;}' +
                     p + 'table{width:100%; border-collapse:collapse; table-layout:fixed; font-size:11px;}' +
@@ -17819,7 +17819,7 @@ if (systemData.classes && systemData.classes.length > 0) {
 
         // ==================== FUNKSIONET PËR EXPORT TEACHER CLASS DATA ====================
         function exportTeacherClassData() {
-            if (!isTeacher()) { showNotification("Vetëm kujdestarët mund të eksportojnë të dhënat e klasës!");
+            if (!isTeacher()) { showNotification("Vetëm mësuesit mund të eksportojnë të dhënat e klasës!");
                 return; }
             var classObj = getCurrentClass();
             if (!classObj) { showNotification("Klasa nuk u gjet!"); return; }
@@ -17855,7 +17855,7 @@ if (systemData.classes && systemData.classes.length > 0) {
         }
 
         function importTeacherClassData() {
-            if (!isTeacher()) { showNotification("Vetëm kujdestarët mund të importojnë të dhënat e klasës!");
+            if (!isTeacher()) { showNotification("Vetëm mësuesit mund të importojnë të dhënat e klasës!");
                 return; }
             var inp = document.createElement('input');
             inp.type = 'file';
@@ -18419,7 +18419,7 @@ function ensureSystemDataFields() {
     // sepse shkolla mund të përdorë username si "arbesa" ose "kujdestari_ix1" për mësimdhënës
     // KREJTËSISHT REALË (nuk ka mënyrë të sigurt për sistemin ta dallojë vetë "demo" nga "real"
     // thjesht nga emri). U hoq qëllimisht - fshirja e mësimdhënësve demo tani bëhet vetëm
-    // MANUALISHT nga administratori (p.sh. duke i fshirë një nga një nga "Menaxho Kujdestarët").
+    // MANUALISHT nga administratori (p.sh. duke i fshirë një nga një nga "Menaxho Mësuesit").
     // Riparim i PËRHERSHËM (incidenti 11.8.2026 + mburojë e përgjithshme): heq çdo klasë
     // demo të njohur dhe çdo dyfishim sipas emrit të klasës, në ÇDO ngarkim - jo vetëm një herë.
     if (Array.isArray(systemData.classes)) {
@@ -19755,7 +19755,7 @@ function printClassReport(classObj, semester) {
             stats.total) * 100).toFixed(1) : '0') + '%) | Mungesat: ' + stats.totalAbsences + ' (M/A:' + stats
             .totalWR + ', M/PA:' + stats.totalWOR + ')</div>';
     printHtml +=
-        '<div class="signature-line"><div class="signature"><div style="border-top:1px solid #333;margin-top:5mm;padding-top:1mm;width:140px;">Kujdestari: ' +
+        '<div class="signature-line"><div class="signature"><div style="border-top:1px solid #333;margin-top:5mm;padding-top:1mm;width:140px;">Mësuesi/ja: ' +
         (teacher ? teacher.name : '_______________') + '</div></div>';
     printHtml +=
         '<div class="signature"><div style="border-top:1px solid #333;margin-top:5mm;padding-top:1mm;width:140px;">' + principalTitle() + ': ' +
@@ -19860,7 +19860,7 @@ function printStudentCertificate(classObj, student, semester) {
     printHtml += '<span><strong>📊 Gjithsej: ' + abs.total + '</strong></span></div></div>';
     printHtml += '<div class="certificate-signatures">';
     printHtml +=
-        '<div class="certificate-signature"><div class="certificate-signature-line">Kujdestari</div><div style="font-size:15px; margin-top:2mm;">' +
+        '<div class="certificate-signature"><div class="certificate-signature-line">Mësuesi/ja</div><div style="font-size:15px; margin-top:2mm;">' +
         escapeHtml(teacherName) + '</div></div>';
     printHtml +=
         '<div class="certificate-signature"><div class="certificate-signature-line">' + principalTitle() + '</div><div style="font-size:18px; margin-top:2mm;">' +
@@ -19949,7 +19949,7 @@ function printClassCertificates(className) {
         allHtml += '<span><strong>📊 Gjithsej: ' + abs.total + '</strong></span></div></div>';
         allHtml += '<div class="certificate-signatures">';
         allHtml +=
-            '<div class="certificate-signature"><div class="certificate-signature-line">Kujdestari</div><div style="font-size:18px; margin-top:2mm;">' +
+            '<div class="certificate-signature"><div class="certificate-signature-line">Mësuesi/ja</div><div style="font-size:18px; margin-top:2mm;">' +
             teacherName + '</div></div>';
         allHtml +=
             '<div class="certificate-signature"><div class="certificate-signature-line">' + principalTitle() + '</div><div style="font-size:18px; margin-top:2mm;">' +
@@ -20366,11 +20366,11 @@ console.log("📌 Tani butonat 'Sinkronizo', 'Ngarko' dhe 'Statusi' duhet të fu
 // dhe nota e gjysmëvjetorit shkruhet te fushat EKZISTUESE të sistemit:
 //   student.grades[subKey]           (Gjysmëvjetori I)
 //   student.gradesSemester2[subKey]  (Gjysmëvjetori II)
-// Pra nota del automatikisht te tabela e kujdestarit, dëftesat, statistikat,
+// Pra nota del automatikisht te tabela e mësuesit/es, dëftesat, statistikat,
 // fletëkalimet, raportet etj. Nota llogaritet vetë si mesatare e rrumbullakuar
 // e dy vlerësimeve, por mësimdhënësi mund ta ndryshojë me dorë.
 // Ruajtja në cloud bëhet VETËM në fushat e ndryshuara (update i pjesshëm), që
-// të mos mbishkruhet puna e kujdestarit ose e mësimdhënësve të tjerë.
+// të mos mbishkruhet puna e mësuesit/es ose e mësimdhënësve të tjerë.
 
 var _asmtState = { teacherId: null, key: '', sem: '' };
 var _asmtDraft = {};   // ndryshimet e paruajtura: _asmtDraft[classId|subKey|sem][studentId] = {v1,v2,g}
@@ -20791,7 +20791,7 @@ function printTeacherCredentials() {
         var cls = t.classId ? systemData.classes.find(function(c) { return c.id === t.classId; }) : null;
         var asg = getTeacherAssignments(t.id);
         var roles = [];
-        if (cls) roles.push('👨‍🏫 <strong>Kujdestar i klasës</strong> (' + escapeHtml(cls.className) + ')');
+        if (cls) roles.push('👨‍🏫 <strong>Mësuesi/ja</strong> (' + escapeHtml(cls.className) + ')');
         if (asg.length) roles.push('📝 <strong>Mësimdhënës</strong> (' + teacherClassCount(asg) + ' klasa)');
         if (!roles.length) roles.push('📝 Mësimdhënës (pa lëndë të caktuara ende)');
         return '<div class="card">' +
@@ -21759,7 +21759,7 @@ function buildAccessList() {
         var k = accessEmailKey(getSyntheticEmail(t.username));
         if (k.indexOf('@') <= 0 || list[k]) return;
         list[k] = { role: 'teacher', name: t.name || t.username, tid: String(t.id) };
-        // 🔒 Hapi 4 (faza 2): klasa kujdestare + lëndët që jep (lexohen nga rregullat e serverit)
+        // 🔒 Hapi 4 (faza 2): klasa e vet + lëndët që jep (lexohen nga rregullat e serverit)
         if (t.classId && rtdbKeyOk(t.classId) && (systemData.classes || []).some(function(c) { return c.id === t.classId; })) list[k].cls = String(t.classId);
         var subj = {};
         getTeacherAssignments(t.id).forEach(function(a) {
@@ -22525,7 +22525,7 @@ function saveSystemLock() {
 //  🧪 HAPI 4 - KONTROLLI PARAPRAK (faza 1, pa rrezik) - 26.9.2026
 // =====================================================================
 // Qëllimi i Hapit 4: secili mësimdhënës të mund të NDRYSHOJË vetëm klasën e vet
-// (kujdestari) dhe notat/vlerësimet e lëndëve që jep - e zbatuar nga serveri.
+// (mësuesi/ja) dhe notat/vlerësimet e lëndëve që jep - e zbatuar nga serveri.
 // Para se të ndryshohen rregullat, kjo fazë VETËM VËZHGON: sa herë një mësimdhënës ruan,
 // sistemi krahason ndryshimet e tij me atë që do t'i lejohej. Nëse diçka do të bllokohej,
 // shënohet te /diagnostics/step4 dhe administratori e sheh te 🛡️ Qasja në të dhëna.
@@ -22618,7 +22618,7 @@ function step4Report(paths) {
 //  🔒 HAPI 4 - FAZA 2: kufizimi nga serveri (8.10.2026)
 // =====================================================================
 // Pasi administratori vendos rregullat e fazës 2 në Firebase, serveri refuzon çdo shkrim të
-// mësimdhënësit jashtë klasës kujdestare dhe lëndëve që jep. Që një ndryshim i vetëm i ndaluar
+// mësimdhënësit jashtë klasës e vet dhe lëndëve që jep. Që një ndryshim i vetëm i ndaluar
 // të mos e bllokojë gjithë ruajtjen, aplikacioni i heq paraprakisht shtigjet e ndaluara
 // (të njëjtat kushte si rregullat) dhe i shënon te diagnostika.
 var STEP4_ALWAYS_OK = { lastUpdated: 1, lastUpdatedBy: 1, appVersion: 1, undoState: 1 };
@@ -22726,12 +22726,12 @@ function renderPhase2Section() {
     var on = step4Phase2On();
     return '<div style="border:2px solid ' + (on ? '#2e7d32' : '#1565c0') + '; border-radius:10px; padding:10px; margin:10px 0;">' +
         '<h3 style="margin:0 0 6px; font-size:15px;">🔒 Hapi 4 - faza 2: kufizimi nga serveri ' + (on ? '<span style="color:#2e7d32;">(AKTIV)</span>' : '') + '</h3>' +
-        '<div style="font-size:12px; color:#333;">Me këto rregulla, serveri lejon secilin mësimdhënës të ndryshojë <b>vetëm klasën kujdestare</b> dhe <b>notat/vlerësimet e lëndëve që jep</b>. Administratori mbetet pa kufizime.</div>' +
+        '<div style="font-size:12px; color:#333;">Me këto rregulla, serveri lejon secilin mësimdhënës të ndryshojë <b>vetëm klasën e vet</b> dhe <b>notat/vlerësimet e lëndëve që jep</b>. Administratori mbetet pa kufizime.</div>' +
         '<ol style="font-size:12px; padding-left:18px; margin:6px 0;">' +
         '<li>Kontrolli paraprak më sipër duhet të jetë bosh dhe të gjithë mësimdhënësit me versionin e ri.</li>' +
         '<li>Klikoni <b>📋 Kopjo rregullat - faza 2</b>, te Firebase → Realtime Database → <b>Rules</b> zëvendësoni tekstin dhe klikoni <b>Publish</b>.</li>' +
         '<li>Kthehuni këtu dhe klikoni <b>✅ Rregullat u vendosën</b>.</li>' +
-        '<li>Provoni me një kujdestar: notat e klasës së vet ruhen; ndryshimet jashtë saj jo.</li></ol>' +
+        '<li>Provoni me një mësues/e: notat e klasës së vet ruhen; ndryshimet jashtë saj jo.</li></ol>' +
         '<textarea id="phase2RulesText" readonly style="width:100%; height:120px; font-family:Consolas, monospace; font-size:10px; border:1px solid #ccc; border-radius:6px; padding:6px;">' + escapeHtml(getPhase2Rules()) + '</textarea>' +
         '<div style="font-size:11px; color:#555;">🔙 Kthimi mbrapsht: ngjitni rregullat e mëparshme (më poshtë, "Rregullat e reja për Firebase"), Publish, dhe klikoni ↩️ Çaktivizo.</div>' +
         '<div style="display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap; margin-top:6px;">' +
@@ -22823,7 +22823,7 @@ function auditDiff(base, local) {
     var out = auditDiffClasses(base, local);
     if (!base || !local) return out;
     try {
-        // 👨‍🏫 mësimdhënësit: shtim, fshirje, emër, kujdestari
+        // 👨‍🏫 mësimdhënësit: shtim, fshirje, emër, mësuesi/ja
         var bT = {}, seenT = {};
         auditArr(base.teachers).forEach(function(t) { if (t && t.id) bT[t.id] = t; });
         var clsName = function(id) { var c = auditArr(local.classes).concat(auditArr(base.classes)).find(function(x) { return x && x.id === id; }); return c ? c.className : ''; };
@@ -22833,7 +22833,7 @@ function auditDiff(base, local) {
             var b = bT[t.id];
             if (!b) { out.push({ c: '', s: t.name || '', f: 'Mësimdhënës i shtuar', o: '', n: t.name || '' }); return; }
             if (auditVal(b.name) !== auditVal(t.name)) out.push({ c: '', s: t.name || '', f: 'Emri i mësimdhënësit', o: auditVal(b.name), n: auditVal(t.name) });
-            if (auditVal(b.classId) !== auditVal(t.classId)) out.push({ c: clsName(t.classId) || clsName(b.classId), s: t.name || '', f: 'Kujdestaria', o: clsName(b.classId) || '', n: clsName(t.classId) || '' });
+            if (auditVal(b.classId) !== auditVal(t.classId)) out.push({ c: clsName(t.classId) || clsName(b.classId), s: t.name || '', f: 'Klasa', o: clsName(b.classId) || '', n: clsName(t.classId) || '' });
             if (auditVal(b.username) !== auditVal(t.username)) out.push({ c: '', s: t.name || '', f: 'Emri i përdoruesit', o: auditVal(b.username), n: auditVal(t.username) });
         });
         Object.keys(bT).forEach(function(id) { if (!seenT[id]) out.push({ c: '', s: bT[id].name || '', f: 'Mësimdhënës i fshirë', o: bT[id].name || '', n: '' }); });
@@ -23112,9 +23112,9 @@ function step4Clear() {
 // =====================================================================
 //  ⇄ NDËRRIMI I ORËVE MES DY MËSIMDHËNËSVE (28.9.2026)
 // =====================================================================
-// P.sh. kur ndërrohet kujdestari i një klase: të gjitha orët (lëndë-klasat) e mësimdhënësit A
+// P.sh. kur ndërrohet mësuesi/ja i një klase: të gjitha orët (lëndë-klasat) e mësimdhënësit A
 // kalojnë te B dhe ato të B-së te A - në orar, në "Caktimet", te Ditari personal etj.
-// Opsionalisht ndërrohet edhe kujdestaria. Ditët e lira/të bllokuara mbeten te personi.
+// Opsionalisht ndërrohet edhe klasa. Ditët e lira/të bllokuara mbeten te personi.
 function openSwapTeachersModal() {
     if (!requireAdmin()) return;
     var old = document.getElementById('swapTeachersModal');
@@ -23133,7 +23133,7 @@ function openSwapTeachersModal() {
         '<div style="flex:1; min-width:220px;"><label style="font-size:12px;">Mësimdhënësi 2</label><select id="swapB" style="' + sel + '" onchange="renderSwapPreview()">' + opts + '</select></div></div>' +
         '<label style="display:block; margin-top:10px; font-size:13px;"><input type="checkbox" id="swapHours" checked onchange="renderSwapPreview()"> Ndërro <b>fondin e orëve</b> (të gjitha lëndët dhe klasat që japin)</label>' +
         '<label style="display:block; margin-top:4px; font-size:13px;"><input type="checkbox" id="swapDays" checked onchange="renderSwapPreview()"> Ndërro edhe <b>ditët e punës / të lira</b> dhe <b>ndërrimin</b> (paradite/pasdite)</label>' +
-        '<label style="display:block; margin-top:4px; font-size:13px;"><input type="checkbox" id="swapHomeroom" onchange="renderSwapPreview()"> Ndërro edhe <b>kujdestarinë</b> e klasave</label>' +
+        '<label style="display:block; margin-top:4px; font-size:13px;"><input type="checkbox" id="swapHomeroom" onchange="renderSwapPreview()"> Ndërro edhe <b>klasën</b> e klasave</label>' +
         '<div id="swapPreview" style="margin-top:10px; font-size:12px; background:#f5f5f5; border-radius:8px; padding:10px; max-height:260px; overflow:auto;">Zgjidhni dy mësimdhënës.</div>' +
         '<div style="display:flex; gap:8px; justify-content:flex-end; margin-top:12px;">' +
         '<button class="btn btn-success" onclick="applyTeacherSwap()">⇄ Ndërro</button>' +
@@ -23177,7 +23177,7 @@ function renderSwapPreview() {
     var box = document.getElementById('swapPreview');
     var ta = systemData.teachers.find(function(t) { return t.id === a; });
     var tb = systemData.teachers.find(function(t) { return t.id === b; });
-    // kujdestaria sugjerohet vetë kur njëri prej tyre është kujdestar
+    // klasa sugjerohet vetë kur njëri prej tyre është mësues/e
     var hr = document.getElementById('swapHomeroom');
     if (ta && tb && !hr.dataset.touched) hr.checked = !!(ta.classId || tb.classId);
     hr.onclick = function() { hr.dataset.touched = '1'; };
@@ -23205,7 +23205,7 @@ function renderSwapPreview() {
         }
     }
     if (hr.checked) {
-        html += '<div style="margin-top:8px;"><b>Kujdestaria:</b> ' + escapeHtml(ta.name) + ' (' + clsName(ta) + ') ⇄ ' + escapeHtml(tb.name) + ' (' + clsName(tb) + ')<br>' +
+        html += '<div style="margin-top:8px;"><b>Klasa:</b> ' + escapeHtml(ta.name) + ' (' + clsName(ta) + ') ⇄ ' + escapeHtml(tb.name) + ' (' + clsName(tb) + ')<br>' +
             'Pas ndërrimit: ' + escapeHtml(ta.name) + ' → <b>' + clsName(tb) + '</b>, ' + escapeHtml(tb.name) + ' → <b>' + clsName(ta) + '</b></div>';
     }
     box.innerHTML = html || 'Asgjë për t\'u ndërruar - shënoni të paktën një opsion.';
@@ -23218,7 +23218,7 @@ function applyTeacherSwap() {
     if (!ta || !tb || a === b) { alert('⚠️ Zgjidhni dy mësimdhënës të ndryshëm.'); return; }
     var doHours = document.getElementById('swapHours').checked, doHr = document.getElementById('swapHomeroom').checked;
     if (!doHours && !doHr) return;
-    if (!confirm('Të ndërrohen ' + (doHours ? 'orët' : '') + (doHours && doHr ? ' dhe ' : '') + (doHr ? 'kujdestaria' : '') +
+    if (!confirm('Të ndërrohen ' + (doHours ? 'orët' : '') + (doHours && doHr ? ' dhe ' : '') + (doHr ? 'klasa' : '') +
             ' mes ' + ta.name + ' dhe ' + tb.name + '?\n\nMund ta ktheni duke e përsëritur të njëjtin veprim.')) return;
     var n = 0;
     if (doHours) {
@@ -23250,13 +23250,13 @@ function applyTeacherSwap() {
     saveToLocal();
     document.getElementById('swapTeachersModal').remove();
     refreshDisplay();
-    showNotification('✅ U ndërruan: ' + (doHours ? n + ' orë/klasa' : '') + (doHours && doHr ? ' + ' : '') + (doHr ? 'kujdestaria' : '') + ' (' + ta.name + ' ⇄ ' + tb.name + ')');
+    showNotification('✅ U ndërruan: ' + (doHours ? n + ' orë/klasa' : '') + (doHours && doHr ? ' + ' : '') + (doHr ? 'klasa' : '') + ' (' + ta.name + ' ⇄ ' + tb.name + ')');
 }
 
 // =====================================================================
 //  🔍 KONTROLLI I MËSIMDHËNËSVE (28.9.2026)
 // =====================================================================
-// Tregon për çdo mësimdhënës: me cilën llogari hyn (emri i përdoruesit), kujdestarinë,
+// Tregon për çdo mësimdhënës: me cilën llogari hyn (emri i përdoruesit), klasën,
 // fondin e orëve sipas lëndëve dhe ndërrimit. Zbulon mospërputhjet (p.sh. kur një llogari
 // hyrjeje është lidhur me regjistrimin e një mësimdhënësi tjetër, ose emra të dyfishuar)
 // dhe i rregullon: kalimi i kredencialeve te regjistri i duhur, ose bashkimi i dy regjistrave.
@@ -23288,7 +23288,7 @@ function openTeacherCheckModal(filter) {
         '<h2 style="color:#0b4b6e;">👨‍🏫 Menaxhimi i mësimdhënësve</h2>' +
         '<div style="display:flex; gap:6px; flex-wrap:wrap; margin:6px 0 10px;">' +
         '<button class="btn btn-success" style="' + tb + '" onclick="openTeacherModal()">➕ Shto mësimdhënës</button>' +
-        '<button class="btn btn-success" style="' + tb + '" onclick="openChangeHomeroomModal()">👨‍🏫 Ndërro kujdestarin</button>' +
+        '<button class="btn btn-success" style="' + tb + '" onclick="openChangeHomeroomModal()">👨‍🏫 Ndërro mësuesin/en</button>' +
         '<button class="btn btn-info" style="' + tb + '" onclick="openSwapTeachersModal()">⇄ Ndërro orët</button>' +
         '<button class="btn btn-purple" style="' + tb + '" onclick="openAssessmentsAdminModal()">📒 Ditarët</button>' +
         '<button class="btn btn-admin" style="' + tb + '" onclick="openPasswordModal()">🔑 Fjalëkalimet</button>' +
@@ -23323,7 +23323,7 @@ function renderTeacherCheckList() {
                 '<span>' + (p.level === 'err' ? '🔴 ' : '🟡 ') + p.text + '</span>' +
                 '<button class="btn btn-success" style="font-size:11px; padding:4px 10px; white-space:nowrap;" onclick="' + p.fix + '">' + p.label + '</button></div>';
         }).join('') + '</div>' :
-        '<div style="background:#e8f5e9; border-radius:10px; padding:8px 10px; margin-bottom:10px; font-size:13px;">✅ <b>Asnjë problem i gjetur</b> - llogaritë, kujdestaria dhe orët janë në rregull.</div>';
+        '<div style="background:#e8f5e9; border-radius:10px; padding:8px 10px; margin-bottom:10px; font-size:13px;">✅ <b>Asnjë problem i gjetur</b> - llogaritë, klasa dhe orët janë në rregull.</div>';
     var others = '<option value="">-- zgjidhni --</option>' + ts.map(function(t) { return '<option value="' + t.id + '">' + escapeHtml(t.name) + (t.username ? ' (' + escapeHtml(t.username) + ')' : '') + '</option>'; }).join('');
     var rows = ts.filter(function(t) { return !f || normName(t.name).indexOf(f) !== -1 || normName(t.username).indexOf(f) !== -1; }).map(function(t) {
         var s = teacherLoadSummary(t.id);
@@ -23336,7 +23336,7 @@ function renderTeacherCheckList() {
             '<td style="padding:6px; font-size:12px;">' + subs + (s.shifts.length ? '<div style="color:#666; font-size:11px;">🕐 ' + s.shifts.join(' + ') + '</div>' : '') + '</td>' +
             '<td style="padding:6px; font-size:11px; white-space:nowrap;">' +
             '<div style="display:flex; gap:4px; flex-wrap:wrap; margin-bottom:4px;">' +
-            '<button class="btn btn-admin" style="font-size:11px; padding:3px 7px;" onclick="hubEdit(\'' + t.id + '\')" title="Emri, llogaria, kujdestaria">✏️</button>' +
+            '<button class="btn btn-admin" style="font-size:11px; padding:3px 7px;" onclick="hubEdit(\'' + t.id + '\')" title="Emri, llogaria, klasa">✏️</button>' +
             (t.username ? '<button class="btn btn-admin" style="font-size:11px; padding:3px 7px;" onclick="openChangePasswordForTeacher(\'' + t.id + '\')" title="Fjalëkalimi">🔑</button>' : '') +
             (getTeacherAssignments(t.id).length ? '<button class="btn btn-purple" style="font-size:11px; padding:3px 7px;" onclick="openAssessmentsAdminModal(\'' + t.id + '\')" title="Ditari personal">📒</button>' : '') +
             '<button class="btn btn-danger" style="font-size:11px; padding:3px 7px;" onclick="removeTeacher(\'' + t.id + '\')" title="Fshi">🗑️</button></div>' +
@@ -23346,7 +23346,7 @@ function renderTeacherCheckList() {
             '<div style="margin-top:4px;">🔗 Bashkoje me:<br><select onchange="tcMergeInto(\'' + t.id + '\', this.value)" style="max-width:170px;">' + others + '</select></div></details></td></tr>';
     }).join('');
     document.getElementById('tcList').innerHTML = '<table style="width:100%; border-collapse:collapse; font-size:13px;"><thead><tr style="background:#0b4b6e; color:#fff;">' +
-        '<th style="padding:6px; text-align:left;">Mësimdhënësi</th><th style="padding:6px; text-align:left;">Llogaria (hyrja)</th><th style="padding:6px;">Kujdestar</th><th style="padding:6px; text-align:left;">Fondi i orëve</th><th style="padding:6px;">Rregullo</th></tr></thead><tbody>' + rows + '</tbody></table>';
+        '<th style="padding:6px; text-align:left;">Mësimdhënësi</th><th style="padding:6px; text-align:left;">Llogaria (hyrja)</th><th style="padding:6px;">Mësues/e</th><th style="padding:6px; text-align:left;">Fondi i orëve</th><th style="padding:6px;">Rregullo</th></tr></thead><tbody>' + rows + '</tbody></table>';
 }
 // Dy llogari hyrjeje të ngatërruara: secila kthehet te regjistri i vet
 function tcSwapCredentials(aId, bId) {
@@ -23354,7 +23354,7 @@ function tcSwapCredentials(aId, bId) {
     var a = systemData.teachers.find(function(t) { return t.id === aId; }), b = systemData.teachers.find(function(t) { return t.id === bId; });
     if (!a || !b) return;
     if (!confirm('⇄ Të ndërrohen llogaritë e hyrjes?\n\n' + a.name + ': "' + (a.username || '-') + '" → "' + (b.username || '-') + '"\n' +
-            b.name + ': "' + (b.username || '-') + '" → "' + (a.username || '-') + '"\n\nFjalëkalimet shkojnë bashkë me emrat e përdoruesit. Orët dhe kujdestaria NUK ndryshojnë.')) { renderTeacherCheckList(); return; }
+            b.name + ': "' + (b.username || '-') + '" → "' + (a.username || '-') + '"\n\nFjalëkalimet shkojnë bashkë me emrat e përdoruesit. Orët dhe klasa NUK ndryshojnë.')) { renderTeacherCheckList(); return; }
     var ua = a.username, pa = a.password, ub = b.username, pb = b.password;
     a.username = ub || null; b.username = ua || null;
     try { delete a.password; delete b.password; } catch (e) {}
@@ -23381,12 +23381,12 @@ function tcMoveCredentials(fromId, toId) {
     refreshDisplay();
     showNotification('🔑 Llogaria "' + b.username + '" tani hyn si ' + b.name + '.');
 }
-// Dy regjistra të të njëjtit person bashkohen në një (orët, kujdestaria, llogaria, ditët e lira)
+// Dy regjistra të të njëjtit person bashkohen në një (orët, klasa, llogaria, ditët e lira)
 function tcMergeInto(fromId, toId) {
     if (!toId || fromId === toId) return;
     var a = systemData.teachers.find(function(t) { return t.id === fromId; }), b = systemData.teachers.find(function(t) { return t.id === toId; });
     if (!a || !b) return;
-    if (!confirm('🔗 Të bashkohet "' + a.name + '" te "' + b.name + '"?\n\n• Të gjitha orët e ' + a.name + ' kalojnë te ' + b.name + '\n• Kujdestaria/llogaria/ditët e lira kalojnë vetëm nëse ' + b.name + ' s\'i ka\n• Regjistri "' + a.name + '" FSHIHET\n\nBëni backup para këtij veprimi. Vazhdo?')) { renderTeacherCheckList(); return; }
+    if (!confirm('🔗 Të bashkohet "' + a.name + '" te "' + b.name + '"?\n\n• Të gjitha orët e ' + a.name + ' kalojnë te ' + b.name + '\n• Klasa/llogaria/ditët e lira kalojnë vetëm nëse ' + b.name + ' s\'i ka\n• Regjistri "' + a.name + '" FSHIHET\n\nBëni backup para këtij veprimi. Vazhdo?')) { renderTeacherCheckList(); return; }
     Object.keys(systemData.subjectTeachers || {}).forEach(function(cid) {
         var m = systemData.subjectTeachers[cid] || {};
         Object.keys(m).forEach(function(k) { if (m[k] === fromId) m[k] = toId; });
@@ -23413,11 +23413,11 @@ function tcMergeInto(fromId, toId) {
 }
 
 // =====================================================================
-//  👨‍🏫 NDËRRIMI I KUJDESTARIT (28.9.2026)
+//  👨‍🏫 NDËRRIMI I MËSUESIT/ES (28.9.2026)
 // =====================================================================
-// Kujdestaria dhe fondi i orëve janë DY GJËRA TË NDARA: kur ndërrohet kujdestari i një
-// klase, ndryshon vetëm "kujdestari i klasës". Orët e lëndëve (sipas orarit) mbeten secila
-// te mësimdhënësi që i jep - si kujdestari i vjetër ashtu edhe i riu vazhdojnë me lëndët e veta.
+// Klasa dhe fondi i orëve janë DY GJËRA TË NDARA: kur ndërrohet mësuesi/ja i një
+// klase, ndryshon vetëm "mësuesi/ja". Orët e lëndëve (sipas orarit) mbeten secila
+// te mësimdhënësi që i jep - si mësuesi/ja i vjetër ashtu edhe i riu vazhdojnë me lëndët e veta.
 function openChangeHomeroomModal(preClassId) {
     if (!requireAdmin()) return;
     var old = document.getElementById('homeroomModal');
@@ -23432,24 +23432,24 @@ function openChangeHomeroomModal(preClassId) {
     };
     var clsOpts = classes.map(function(c) {
         var h = homeroomOf(c);
-        return '<option value="' + c.id + '"' + (c.id === preClassId ? ' selected' : '') + '>' + escapeHtml(c.className) + ' — ' + (h ? escapeHtml(h.name) : 'pa kujdestar') + '</option>';
+        return '<option value="' + c.id + '"' + (c.id === preClassId ? ' selected' : '') + '>' + escapeHtml(c.className) + ' — ' + (h ? escapeHtml(h.name) : 'pa mësues/e') + '</option>';
     }).join('');
     var ts = systemData.teachers.slice().sort(function(a, b) { return String(a.name).localeCompare(String(b.name), 'sq'); });
     var tOpts = '<option value="">-- zgjidhni --</option>' + ts.map(function(t) {
         var c = t.classId && systemData.classes.find(function(x) { return x.id === t.classId; });
-        return '<option value="' + t.id + '">' + escapeHtml(t.name) + (c ? ' (tani kujdestar i ' + escapeHtml(c.className) + ')' : '') + '</option>';
+        return '<option value="' + t.id + '">' + escapeHtml(t.name) + (c ? ' (tani mësues/e i ' + escapeHtml(c.className) + ')' : '') + '</option>';
     }).join('');
     var sel = 'width:100%; padding:8px; border:2px solid #0b4b6e; border-radius:8px; font-size:14px;';
     var html = '<div id="homeroomModal" class="modal show" style="display:block; z-index:10006; background:rgba(0,0,0,0.6);">' +
         '<div class="modal-content" style="max-width:560px;">' +
         '<button class="modal-close" onclick="document.getElementById(\'homeroomModal\').remove()">×</button>' +
-        '<h2 style="color:#0b4b6e;">👨‍🏫 Ndërro kujdestarin e klasës</h2>' +
-        '<p style="font-size:12px; color:#555;">Ndryshon <b>vetëm kujdestarinë</b>. Orët e lëndëve mbeten te mësimdhënësit që i japin sipas orarit - kujdestari i vjetër dhe i riu vazhdojnë secili me lëndët e veta.</p>' +
+        '<h2 style="color:#0b4b6e;">👨‍🏫 Ndërro mësuesin/en e klasës</h2>' +
+        '<p style="font-size:12px; color:#555;">Ndryshon <b>vetëm klasën</b>. Orët e lëndëve mbeten te mësimdhënësit që i japin sipas orarit - mësuesi/ja i vjetër dhe i riu vazhdojnë secili me lëndët e veta.</p>' +
         '<label style="font-size:12px;">Klasa</label><select id="hrClass" style="' + sel + '" onchange="renderHomeroomPreview()">' + clsOpts + '</select>' +
-        '<label style="font-size:12px; display:block; margin-top:8px;">Kujdestari i ri</label><select id="hrTeacher" style="' + sel + '" onchange="renderHomeroomPreview()">' + tOpts + '</select>' +
+        '<label style="font-size:12px; display:block; margin-top:8px;">Mësuesi/ja i ri</label><select id="hrTeacher" style="' + sel + '" onchange="renderHomeroomPreview()">' + tOpts + '</select>' +
         '<div id="hrPreview" style="margin-top:10px; font-size:13px; background:#f5f5f5; border-radius:8px; padding:10px;"></div>' +
         '<div style="display:flex; gap:8px; justify-content:flex-end; margin-top:12px;">' +
-        '<button class="btn btn-success" onclick="applyHomeroomChange()">✅ Ndrysho kujdestarin</button>' +
+        '<button class="btn btn-success" onclick="applyHomeroomChange()">✅ Ndrysho mësuesin/en</button>' +
         '<button class="btn btn-warning" onclick="document.getElementById(\'homeroomModal\').remove()">Anulo</button></div></div></div>';
     document.body.insertAdjacentHTML('beforeend', html);
     renderHomeroomPreview();
@@ -23460,14 +23460,14 @@ function renderHomeroomPreview() {
     var nt = systemData.teachers.find(function(t) { return t.id === tid; });
     var oldT = systemData.teachers.find(function(t) { return t.classId === cid; }) || systemData.teachers.find(function(t) { return c && t.id === c.teacherId; });
     var box = document.getElementById('hrPreview');
-    if (!c || !nt) { box.innerHTML = 'Zgjidhni klasën dhe kujdestarin e ri.'; return; }
-    if (oldT && oldT.id === nt.id) { box.innerHTML = 'ℹ️ ' + escapeHtml(nt.name) + ' është tashmë kujdestar i ' + escapeHtml(c.className) + '.'; return; }
+    if (!c || !nt) { box.innerHTML = 'Zgjidhni klasën dhe mësuesin/en e ri.'; return; }
+    if (oldT && oldT.id === nt.id) { box.innerHTML = 'ℹ️ ' + escapeHtml(nt.name) + ' është tashmë mësues/e i ' + escapeHtml(c.className) + '.'; return; }
     var ntOld = nt.classId && systemData.classes.find(function(x) { return x.id === nt.classId; });
     var sumA = oldT ? getTeacherAssignments(oldT.id).length : 0, sumB = getTeacherAssignments(nt.id).length;
-    box.innerHTML = '• Kujdestar i <b>' + escapeHtml(c.className) + '</b>: ' + (oldT ? escapeHtml(oldT.name) : '—') + ' → <b>' + escapeHtml(nt.name) + '</b><br>' +
-        (oldT ? '• ' + escapeHtml(oldT.name) + ' mbetet mësimdhënës me <b>' + sumA + '</b> klasat e veta (pa kujdestari)' + (oldT.username ? ' dhe llogarinë e vet' : '') + '<br>' : '') +
+    box.innerHTML = '• Mësues/e i <b>' + escapeHtml(c.className) + '</b>: ' + (oldT ? escapeHtml(oldT.name) : '—') + ' → <b>' + escapeHtml(nt.name) + '</b><br>' +
+        (oldT ? '• ' + escapeHtml(oldT.name) + ' mbetet mësimdhënës me <b>' + sumA + '</b> klasat e veta (pa mësuesi/ja)' + (oldT.username ? ' dhe llogarinë e vet' : '') + '<br>' : '') +
         '• ' + escapeHtml(nt.name) + ' vazhdon me <b>' + sumB + '</b> klasat e veta' + (nt.username ? '' : ' - <span style="color:#c62828;">s\'ka ende llogari hyrjeje (jepjani me ✏️)</span>') + '<br>' +
-        (ntOld ? '• ⚠️ ' + escapeHtml(nt.name) + ' ishte kujdestar i ' + escapeHtml(ntOld.className) + ' - ajo klasë mbetet pa kujdestar.<br>' : '') +
+        (ntOld ? '• ⚠️ ' + escapeHtml(nt.name) + ' ishte mësues/e i ' + escapeHtml(ntOld.className) + ' - ajo klasë mbetet pa mësues/e.<br>' : '') +
         '<span style="color:#2e7d32;">✔ Asnjë orë e lëndëve nuk lëviz.</span>';
 }
 function applyHomeroomChange() {
@@ -23475,10 +23475,10 @@ function applyHomeroomChange() {
     var cid = document.getElementById('hrClass').value, tid = document.getElementById('hrTeacher').value;
     var c = systemData.classes.find(function(x) { return x.id === cid; });
     var nt = systemData.teachers.find(function(t) { return t.id === tid; });
-    if (!c || !nt) { alert('⚠️ Zgjidhni klasën dhe kujdestarin e ri.'); return; }
-    // kujdestari i vjetër (ose kushdo tjetër i shënuar për këtë klasë) mbetet pa kujdestari
+    if (!c || !nt) { alert('⚠️ Zgjidhni klasën dhe mësuesin/en e ri.'); return; }
+    // mësuesi/ja i vjetër (ose kushdo tjetër i shënuar për këtë klasë) mbetet pa mësuesi/ja
     systemData.teachers.forEach(function(t) { if (t.classId === cid && t.id !== tid) t.classId = null; });
-    // klasa e mëparshme e kujdestarit të ri mbetet pa kujdestar
+    // klasa e mëparshme e mësuesit/es të ri mbetet pa mësues/e
     if (nt.classId && nt.classId !== cid) {
         var prev = systemData.classes.find(function(x) { return x.id === nt.classId; });
         if (prev && prev.teacherId === nt.id) prev.teacherId = null;
@@ -23488,13 +23488,13 @@ function applyHomeroomChange() {
     saveToLocal();
     document.getElementById('homeroomModal').remove();
     refreshDisplay();
-    showNotification('✅ Kujdestar i ' + c.className + ' tani është ' + nt.name + '. Orët e lëndëve nuk u prekën.');
+    showNotification('✅ Mësues/e i ' + c.className + ' tani është ' + nt.name + '. Orët e lëndëve nuk u prekën.');
 }
 
 // =====================================================================
 //  👨‍🏫 MENAXHIMI I MËSIMDHËNËSVE - QENDRA (28.9.2026)
 // =====================================================================
-// Një vend i vetëm: lista e mësimdhënësve me llogarinë, kujdestarinë dhe fondin e orëve;
+// Një vend i vetëm: lista e mësimdhënësve me llogarinë, klasën dhe fondin e orëve;
 // problemet e gjetura automatikisht me rregullim me një klik; dhe të gjitha veglat.
 function hubFold(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
 // Kujt i përket (me gjasë) një emër përdoruesi? - sipas kodit të klasës (p.sh. 7/5 → VII-5)
@@ -23550,17 +23550,17 @@ function detectTeacherProblems() {
         if (byUser[k].length > 1) probs.push({ level: 'err', text: 'I njëjti emër përdoruesi "' + escapeHtml(byUser[k][0].username) + '" te: ' + byUser[k].map(function(t) { return '<b>' + escapeHtml(t.name) + '</b>'; }).join(', ') + '.',
             fix: 'hubEdit(\'' + byUser[k][1].id + '\')', label: '✏️ Ndrysho njërin' });
     });
-    // 3) kujdestaria: klasa pa kujdestar, me dy kujdestarë, ose lidhje jo të njëjta
+    // 3) klasa: klasa pa mësues/e, me dy mësues, ose lidhje jo të njëjta
     var linkBad = false, noHr = [];
     systemData.classes.slice().sort(function(a, b) { var ka = parseClassOrderKey(a.className), kb = parseClassOrderKey(b.className); return (ka.grade - kb.grade) || (ka.section - kb.section); }).forEach(function(c) {
         var hs = T.filter(function(t) { return t.classId === c.id; });
-        if (hs.length > 1) probs.push({ level: 'err', text: 'Klasa <b>' + escapeHtml(c.className) + '</b> ka ' + hs.length + ' kujdestarë: ' + hs.map(function(t) { return escapeHtml(t.name); }).join(', ') + '.', fix: 'openChangeHomeroomModal(\'' + c.id + '\')', label: '👨‍🏫 Zgjidh kujdestarin' });
+        if (hs.length > 1) probs.push({ level: 'err', text: 'Klasa <b>' + escapeHtml(c.className) + '</b> ka ' + hs.length + ' mësues: ' + hs.map(function(t) { return escapeHtml(t.name); }).join(', ') + '.', fix: 'openChangeHomeroomModal(\'' + c.id + '\')', label: '👨‍🏫 Zgjidh mësuesin/en' });
         else if (!hs.length) noHr.push(c);
         if (hs.length === 1 && c.teacherId !== hs[0].id) linkBad = true;
     });
-    if (noHr.length) probs.push({ level: 'warn', text: (noHr.length === 1 ? 'Klasa' : noHr.length + ' klasa') + ' pa kujdestar: <b>' + noHr.map(function(c) { return escapeHtml(c.className); }).join(', ') + '</b>.',
-        fix: 'openChangeHomeroomModal(\'' + noHr[0].id + '\')', label: '👨‍🏫 Cakto kujdestarin' });
-    if (linkBad) probs.push({ level: 'warn', text: 'Disa lidhje klasë↔kujdestar s\'përputhen në të dy anët (pa ndikim te hyrja, por mund të ngatërrojë raportet).', fix: 'hubFixHomeroomLinks()', label: '🔧 Rregullo' });
+    if (noHr.length) probs.push({ level: 'warn', text: (noHr.length === 1 ? 'Klasa' : noHr.length + ' klasa') + ' pa mësues/e: <b>' + noHr.map(function(c) { return escapeHtml(c.className); }).join(', ') + '</b>.',
+        fix: 'openChangeHomeroomModal(\'' + noHr[0].id + '\')', label: '👨‍🏫 Cakto mësuesin/en' });
+    if (linkBad) probs.push({ level: 'warn', text: 'Disa lidhje klasë↔mësues/e s\'përputhen në të dy anët (pa ndikim te hyrja, por mund të ngatërrojë raportet).', fix: 'hubFixHomeroomLinks()', label: '🔧 Rregullo' });
     // 4) mësimdhënës me orë por pa llogari
     T.forEach(function(t) {
         if (!t.username && getTeacherAssignments(t.id).length) probs.push({ level: 'warn', text: '<b>' + escapeHtml(t.name) + '</b> ka orë në orar, por s\'ka llogari hyrjeje (s\'mund ta hapë ditarin).', fix: 'hubEdit(\'' + t.id + '\')', label: '🔑 Jepi llogari' });
@@ -23582,7 +23582,7 @@ function hubFixHomeroomLinks() {
         if (hs.length === 1) c.teacherId = hs[0].id;
         else if (!hs.length && c.teacherId && !systemData.teachers.some(function(t) { return t.id === c.teacherId; })) c.teacherId = null;
     });
-    saveToLocal(); renderTeacherCheckList(); showNotification('🔧 Lidhjet klasë↔kujdestar u rregulluan.');
+    saveToLocal(); renderTeacherCheckList(); showNotification('🔧 Lidhjet klasë↔mësues/e u rregulluan.');
 }
 function hubCleanOrphans() {
     if (!confirm('Të lirohen orët që janë të caktuara te mësimdhënës që s\'ekzistojnë më? (Orari i klasave s\'ndryshon - vetëm mbeten pa mësimdhënës, që t\'i caktoni te "Caktimet".)')) return;
@@ -23784,7 +23784,7 @@ function openStudentListModal(preClassId) {
     var admin = isAdmin();
     if (!admin && !isTeacher()) return;
     var my = !admin ? getCurrentClass() : null;
-    if (!admin && !my) { showNotification('ℹ️ Lista printohet nga kujdestari i klasës.'); return; }
+    if (!admin && !my) { showNotification('ℹ️ Lista printohet nga mësuesi/ja.'); return; }
     var classes = slSortedClasses(admin ? systemData.classes : [my]);
     _sl.classId = preClassId || (my ? my.id : (_sl.classId || (classes[0] && classes[0].id)));
     if (!admin) _sl.scope = 'class';
@@ -23858,7 +23858,7 @@ function printStudentList() {
             return r + '</tr>';
         }).join('');
         return '<section class="cls' + (multi && _sl.pageBreak && ci > 0 ? ' pb' : '') + '">' +
-            '<div class="ch"><b>Klasa ' + escapeHtml(c.className) + '</b><span>Kujdestar/e: ' + escapeHtml(kt ? kt.name : '—') + '</span><span>Nxënës: ' + st.length + ' (M ' + m + ' · F ' + f + ')</span></div>' +
+            '<div class="ch"><b>Klasa ' + escapeHtml(c.className) + '</b><span>Mësues/e/e: ' + escapeHtml(kt ? kt.name : '—') + '</span><span>Nxënës: ' + st.length + ' (M ' + m + ' · F ' + f + ')</span></div>' +
             '<table><thead><tr>' + th + '</tr></thead><tbody>' + rows + '</tbody></table></section>';
     }).join('');
     // Përmbledhja: klasat të grupuara sipas nivelit, me nëntotal për çdo nivel dhe total të përgjithshëm,
@@ -23886,7 +23886,7 @@ function printStudentList() {
                 return '<tr><td style="text-align:left;"><b>' + escapeHtml(L) + '</b></td><td>' + lv[L].k + '</td><td>' + lv[L].m + '</td><td>' + lv[L].f + '</td><td><b>' + lv[L].n + '</b></td><td>' + (totAll ? (100 * lv[L].n / totAll).toFixed(1) : '0.0') + '%</td></tr>';
             }).join('') +
             '<tr style="font-weight:bold; background:#dfe7ee;"><td style="text-align:left;">TOTALI</td><td>' + summary.length + '</td><td>' + totM + '</td><td>' + totF + '</td><td>' + totAll + '</td><td>100%</td></tr></tbody></table>' : '';
-        sumTable = '<section class="pb"><h3>Përmbledhja - ' + escapeHtml(scopeTitle) + '</h3><table><thead><tr><th>Nr</th><th style="text-align:left;">Klasa</th><th style="text-align:left;">Kujdestari</th><th>M</th><th>F</th><th>Gjithsej</th></tr></thead><tbody>' +
+        sumTable = '<section class="pb"><h3>Përmbledhja - ' + escapeHtml(scopeTitle) + '</h3><table><thead><tr><th>Nr</th><th style="text-align:left;">Klasa</th><th style="text-align:left;">Mësuesi/ja</th><th>M</th><th>F</th><th>Gjithsej</th></tr></thead><tbody>' +
             rowsHtml + '</tbody></table>' + lvTable + '</section>';
     }
     var html = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Lista e nxënësve - ' + escapeHtml(scopeTitle) + '</title><style>' +
@@ -23899,7 +23899,7 @@ function printStudentList() {
         '</style></head><body>' +
         '<div class="hd"><h2>LISTA E NXËNËSVE - ' + escapeHtml(scopeTitle.toUpperCase()) + '</h2><div>' + escapeHtml(info.name || '') + ' · Viti shkollor ' + escapeHtml(info.year || '') + ' · Data: ' + formatDisplayDate(new Date().toISOString()) + '</div></div>' +
         body + sumTable +
-        '<div class="sig"><div>' + (multi ? 'Përpiloi: ____________________' : 'Kujdestari/ja: ____________________') + '</div><div>' + principalTitle() + ': ' + escapeHtml(info.principal || '') + '</div></div>' +
+        '<div class="sig"><div>' + (multi ? 'Përpiloi: ____________________' : 'Mësuesi/ja/ja: ____________________') + '</div><div>' + principalTitle() + ': ' + escapeHtml(info.principal || '') + '</div></div>' +
         '<script>window.onload=function(){setTimeout(function(){window.print();},250);};<\/script></body></html>';
     var w = window.open('', '_blank');
     if (!w) { showNotification('Ju lutemi lejoni dritaret kërcyese (popups)!'); return; }
@@ -23909,7 +23909,7 @@ function printStudentList() {
 // =====================================================================
 //  ↕️ RENDITJA E NXËNËSVE (1.10.2026)
 // =====================================================================
-// Kujdestari/administratori i rendit nxënësit sipas dëshirës: me tërheqje (drag), me ▲▼,
+// Mësuesi/ja/administratori i rendit nxënësit sipas dëshirës: me tërheqje (drag), me ▲▼,
 // ose me një klik sipas alfabetit (emri / mbiemri) ose sipas gjinisë. Renditja vlen kudo:
 // tabela e notave, dëftesat, fletëkalimet, lista e nxënësve, ditari, SMIA etj. (të dhënat
 // e nxënësve lidhen me nxënësin, jo me pozitën, prandaj asgjë nuk ngatërrohet).
@@ -24386,7 +24386,7 @@ function cert9PageHtml(classObj, student) {
         '<tr>' + CERT9_LEVELS.map(function(l, i) { return '<th>' + l + '<div class="yr">' + escapeHtml(D.years[i] || '') + '</div></th>'; }).join('') + '</tr></thead><tbody>' + rows + '</tbody></table>' +
         '<div class="ln" style="margin-top:2mm;">Vërejtje: ' + f(c.remark, 160) + '</div>' +
         '<div class="ln">Në: ' + f(c.place || 'KAÇANIK', 34) + ' më ' + f(c.issueDate || info.cert9Date || formatDisplayDate(new Date().toISOString()), 28) + '</div>' +
-        '<div class="foot"><div class="sg"><div class="sl"></div>Kujdestari i klasës</div><div class="seal">V.V.</div><div class="sg"><div class="sl"></div>Drejtori / Drejtoresha<br><b>' + escapeHtml(info.principal || '') + '</b></div></div>' +
+        '<div class="foot"><div class="sg"><div class="sl"></div>Mësuesi/ja</div><div class="seal">V.V.</div><div class="sg"><div class="sl"></div>Drejtori / Drejtoresha<br><b>' + escapeHtml(info.principal || '') + '</b></div></div>' +
         '<div class="note"><b>Notat:</b> shkëlqyeshëm (5), shumë mirë (4), mirë (3), mjaftueshëm (2), pamjaftueshëm (1) dhe PIA (*). <b>Notat e sjelljes:</b> shembullore (SH), mirë (M), jo e mirë (JM).</div>' +
         '</section>';
 }
@@ -25514,7 +25514,7 @@ function sched2PrintDraft() {
 // =====================================================================
 // Prindi hyn me llogarinë e fëmijës së vet (emër përdoruesi + fjalëkalim i printuar nga shkolla) dhe
 // sheh VETËM një "pamje" të përgatitur për atë nxënës: notat, mungesat, orarin, sjelljen dhe
-// shënimet e kujdestarit. Prindi s'ka qasje fare te baza e shkollës (schoolData) - rregullat e
+// shënimet e mësuesit/es. Prindi s'ka qasje fare te baza e shkollës (schoolData) - rregullat e
 // serverit i lejojnë të lexojë vetëm /parentView/<pid> të fëmijës së vet.
 //   /parentAccess/<emailKey> = { pid, cid, sid }        (prindi lexon vetëm rreshtin e vet)
 //   /parentCreds/<pid>       = { u, p, cid, sid, ... }  (vetëm stafi - për rishtypje/rivendosje)
@@ -25807,7 +25807,7 @@ function parentPortalBarHtml() {
 function openParentAccessModal() {
     if (!currentUser) return;
     var own = !isAdmin() ? getCurrentClass() : null;
-    if (!isAdmin() && !own) { showNotification('⛔ Vetëm kujdestari i klasës ose administrata.'); return; }
+    if (!isAdmin() && !own) { showNotification('⛔ Vetëm mësuesi/ja ose administrata.'); return; }
     var old = document.getElementById('parModal');
     if (old) old.remove();
     var classes = isAdmin() ? (systemData.classes || []).slice().sort(function(a, b) { return (a.className || '').localeCompare(b.className || '', 'sq', { numeric: true }); }) : [own];
@@ -25881,7 +25881,7 @@ function parentPrintSlips(onlyPid) {
             '<div class="bd"><table><tr><td>Nxënësi/ja:</td><td><b>' + escapeHtml(s.name || '') + '</b></td></tr><tr><td>Klasa:</td><td><b>' + escapeHtml(cls.className) + '</b></td></tr>' +
             '<tr><td>Faqja:</td><td>' + escapeHtml(url) + '</td></tr><tr><td>Përdoruesi:</td><td class="cr">' + escapeHtml(c.u) + '</td></tr><tr><td>Fjalëkalimi:</td><td class="cr">' + escapeHtml(c.p) + '</td></tr></table>' +
             (qr ? '<div class="qr">' + qr + '<div>📷 Skanoni me kamerë</div></div>' : '') + '</div>' +
-            '<div class="ins">Skanoni kodin QR me kamerën e telefonit (ose hapni faqen dhe zgjidhni <b>"👪 Prind"</b>), shkruani përdoruesin dhe fjalëkalimin. Do të shihni notat, mungesat, orarin, sjelljen dhe shënimet e kujdestarit. <b>Mos ia jepni askujt këto të dhëna.</b></div></div>';
+            '<div class="ins">Skanoni kodin QR me kamerën e telefonit (ose hapni faqen dhe zgjidhni <b>"👪 Prind"</b>), shkruani përdoruesin dhe fjalëkalimin. Do të shihni notat, mungesat, orarin, sjelljen dhe shënimet e mësuesit/es. <b>Mos ia jepni askujt këto të dhëna.</b></div></div>';
     };
     var html = '<html><head><meta charset="utf-8"><title>Fletët e prindërve - ' + escapeHtml(cls.className) + '</title><style>' +
         'body{font-family:Arial,sans-serif; margin:0;} @page{size:A4; margin:8mm;} .grid{display:grid; grid-template-columns:1fr 1fr; gap:0;}' +
@@ -26001,12 +26001,12 @@ function parentAfterSignIn(u, silent) {
     var fail = function(msg) { if (silent) return; try { firebase.auth().signOut(); } catch (e) {} alert(msg); };
     db.ref('parentAccess/' + key).once('value').then(function(s) {
         var a = s.val();
-        if (!a || !a.pid) { fail('⛔ Kjo nuk është llogari prindi. Nëse jeni mësimdhënës, zgjidhni "Kujdestar i klasës" ose "Mësimdhënës".'); return; }
+        if (!a || !a.pid) { fail('⛔ Kjo nuk është llogari prindi. Nëse jeni mësimdhënës, zgjidhni "Mësuesi/ja" ose "Mësimdhënës".'); return; }
         window._parentPid = a.pid;
         return parentLoadView();
     }).catch(function(e) {
         fail(/PERMISSION_DENIED|permission/i.test((e && (e.code || e.message)) || '') ?
-            '⛔ Kjo llogari nuk ka qasje si prind (ose qasja është hequr / sistemi është mbyllur përkohësisht). Kontaktoni kujdestarin e klasës.' :
+            '⛔ Kjo llogari nuk ka qasje si prind (ose qasja është hequr / sistemi është mbyllur përkohësisht). Kontaktoni mësuesin/en e klasës.' :
             '⚠️ Gabim gjatë leximit: ' + ((e && (e.code || e.message)) || e));
     });
 }
@@ -26052,7 +26052,7 @@ function parentRenderPortal(tab) {
             '<tr><td class="l">Gjysmëvjetori I</td><td>' + (ab.a1 || 0) + '</td><td class="' + (ab.p1 ? 'warn' : '') + '">' + (ab.p1 || 0) + '</td><td class="b">' + ((ab.a1 || 0) + (ab.p1 || 0)) + '</td></tr>' +
             '<tr><td class="l">Gjysmëvjetori II</td><td>' + (ab.a2 || 0) + '</td><td class="' + (ab.p2 ? 'warn' : '') + '">' + (ab.p2 || 0) + '</td><td class="b">' + ((ab.a2 || 0) + (ab.p2 || 0)) + '</td></tr>' +
             '<tr class="tot"><td class="l">Gjithsej</td><td>' + ((ab.a1 || 0) + (ab.a2 || 0)) + '</td><td>' + ((ab.p1 || 0) + (ab.p2 || 0)) + '</td><td>' + ((ab.a1 || 0) + (ab.p1 || 0) + (ab.a2 || 0) + (ab.p2 || 0)) + '</td></tr>' +
-            '</tbody></table></div><div class="muted sm">Mungesat e paarsyeshme arsyetohen te kujdestari i klasës.</div></div>';
+            '</tbody></table></div><div class="muted sm">Mungesat e paarsyeshme arsyetohen te mësuesi/ja.</div></div>';
     } else if (tab === 'orari') {
         body = '<div class="card"><h3>🗓️ Orari i klasës ' + escapeHtml(v.cls) + (v.shift ? ' <span class="muted">(' + (v.shift === 'pasdite' ? 'pasdite' : 'paradite') + ')</span>' : '') + '</h3><div class="tw"><table class="sched"><thead><tr><th>Ora</th>' +
             PARENT_DAYS.map(function(d) { return '<th>' + d[1] + '</th>'; }).join('') + '</tr></thead><tbody>';
@@ -26066,7 +26066,7 @@ function parentRenderPortal(tab) {
     } else {
         var notes = parentArr(v.notes).slice().reverse();
         body = '<div class="card"><h3>🙂 Sjellja</h3><div class="beh">' + (v.beh ? escapeHtml(v.beh) : '<span class="muted">Ende e pavlerësuar.</span>') + '</div></div>' +
-            '<div class="card"><h3>💬 Shënimet e kujdestarit</h3>' + (notes.length ? notes.map(function(x) {
+            '<div class="card"><h3>💬 Shënimet e mësuesit/es</h3>' + (notes.length ? notes.map(function(x) {
                 return '<div class="note">' + escapeHtml(x.t) + '<div class="muted sm">' + (x.d ? new Date(x.d).toLocaleDateString('sq-AL') : '') + (x.by ? ' · ' + escapeHtml(x.by) : '') + '</div></div>';
             }).join('') : '<div class="muted">Nuk ka shënime.</div>') + '</div>';
     }
@@ -26094,7 +26094,7 @@ function parentRenderPortal(tab) {
         '@media print{#parentPortal{position:static; background:#fff;} #parentPortal .tabs, #parentPortal .top button{display:none;} body > *:not(#parentPortal){display:none !important;}}' +
         '</style>' +
         '<div class="top"><div class="in"><img src="data:image/png;base64,' + SCHOOL_LOGO_B64 + '" alt="">' +
-        '<div class="who"><div class="n">' + escapeHtml(v.name) + '</div><div class="s">Klasa ' + escapeHtml(v.cls) + (v.year ? ' · ' + escapeHtml(v.year) : '') + (v.homeroom ? ' · Kujdestari/ja: ' + escapeHtml(v.homeroom) : '') + '</div><div class="s">' + escapeHtml(v.school || '') + '</div></div>' +
+        '<div class="who"><div class="n">' + escapeHtml(v.name) + '</div><div class="s">Klasa ' + escapeHtml(v.cls) + (v.year ? ' · ' + escapeHtml(v.year) : '') + (v.homeroom ? ' · Mësuesi/ja/ja: ' + escapeHtml(v.homeroom) : '') + '</div><div class="s">' + escapeHtml(v.school || '') + '</div></div>' +
         '<button onclick="parentLoadView()">🔄 Rifresko</button><button onclick="window.print()">🖨️ Printo</button><button onclick="parentLogout()">🚪 Dil</button></div></div>' +
         '<div class="wrap"><div class="tabs">' + tabs.map(function(t) { return '<button class="' + (t[0] === tab ? 'on' : '') + '" onclick="parentRenderPortal(\'' + t[0] + '\')">' + t[1] + '</button>'; }).join('') + '</div>' +
         body + '<div class="foot">👪 Paneli i prindit · përditësuar më ' + (v.at ? new Date(v.at).toLocaleString('sq-AL') : '–') + '<br>Të dhënat janë konfidenciale dhe i shihni vetëm ju.</div></div>';
@@ -26102,7 +26102,7 @@ function parentRenderPortal(tab) {
 
 // ---------- 🔔 njoftimet për prindërit ----------
 //   /parentInbox/<pid>/<mid> = { t, k, d, by, cid, cls, r? }   (r = koha kur prindi e lexoi)
-// Kujdestari (ose administrata) dërgon te një, disa ose të gjithë prindërit e klasës. Prindi i sheh
+// Mësuesi/ja (ose administrata) dërgon te një, disa ose të gjithë prindërit e klasës. Prindi i sheh
 // në panel (me numër të palexuarash) dhe merr njoftim në shfletues kur paneli është i hapur.
 var PARENT_MSG_KINDS = [['info', '📢', 'Njoftim'], ['takim', '📅', 'Takim me prindër'], ['mungese', '⚠️', 'Mungesë'], ['sjellje', '📝', 'Sjellje'], ['lavderim', '🏆', 'Lavdërim'], ['detyre', '📚', 'Mësim / detyra']];
 function parentKind(k) { return PARENT_MSG_KINDS.find(function(x) { return x[0] === k; }) || PARENT_MSG_KINDS[0]; }
@@ -26241,7 +26241,7 @@ function parentInboxHtml() {
     var list = parentInboxList();
     var perm = window.Notification ? Notification.permission : 'unsupported';
     var h = '<div class="card"><h3>🔔 Njoftimet nga shkolla</h3>' +
-        (perm === 'default' ? '<div class="note" style="border-color:#2e7d32;">Dëshironi të njoftoheni sapo kujdestari dërgon diçka? <button onclick="parentAskNotifyPermission()" style="margin-left:6px; padding:5px 10px; border-radius:6px; border:none; background:#2e7d32; color:#fff; cursor:pointer;">🔔 Lejo njoftimet</button></div>' : '') +
+        (perm === 'default' ? '<div class="note" style="border-color:#2e7d32;">Dëshironi të njoftoheni sapo mësuesi/ja dërgon diçka? <button onclick="parentAskNotifyPermission()" style="margin-left:6px; padding:5px 10px; border-radius:6px; border:none; background:#2e7d32; color:#fff; cursor:pointer;">🔔 Lejo njoftimet</button></div>' : '') +
         (list.length ? list.map(function(m) {
             var kd = parentKind(m.k);
             return '<div class="note"' + (m.r ? '' : ' style="border-color:#e65100; background:#fff8ef;"') + '><b>' + kd[1] + ' ' + escapeHtml(kd[2]) + '</b>' + (m.r ? '' : ' <span style="background:#e65100; color:#fff; border-radius:8px; padding:0 6px; font-size:11px;">E RE</span>') +
@@ -26400,7 +26400,7 @@ function edImportPreview(d) {
         '<button class="modal-close" onclick="document.getElementById(\'edImpModal\').remove()">×</button>' +
         '<h2 style="color:#0b4b6e;">📥 Nxënësit e rinj të klasës ' + first + '</h2>' +
         '<p style="font-size:13px;">Nga platforma ' + escapeHtml(d.from === '1-5' ? 'I–V' : d.from) + ', viti ' + escapeHtml(d.schoolYear || '') + '. Nxënësit vendosen te rreshtat bosh të klasës përkatëse (V-1 → ' + first + '-1 …); emrat që ekzistojnë nuk dyfishohen.</p>' +
-        '<table style="width:100%; border-collapse:collapse; font-size:13px;" border="1" cellpadding="5"><tr style="background:#0b4b6e; color:#fff;"><th>Nga</th><th></th><th>Te</th><th>Nxënës të rinj</th><th></th><th>Kujdestari i mëparshëm</th></tr>' + rows + '</table>' +
+        '<table style="width:100%; border-collapse:collapse; font-size:13px;" border="1" cellpadding="5"><tr style="background:#0b4b6e; color:#fff;"><th>Nga</th><th></th><th>Te</th><th>Nxënës të rinj</th><th></th><th>Mësuesi/ja i mëparshëm</th></tr>' + rows + '</table>' +
         '<div style="margin-top:10px;"><button class="btn btn-success" onclick="edImportApply()">✅ Vendosi nxënësit</button></div></div></div>');
 }
 function edImportApply() {
@@ -26701,7 +26701,7 @@ function installSchoolApp() {
     _installPrompt.userChoice.finally(function() { _installPrompt = null; });
 }
 
-// ==================== ROLI I HYRJES (kujdestar / mësimdhënës / admin) ====================
+// ==================== ROLI I HYRJES (mësues/e / mësimdhënës / admin) ====================
 window.loginMode = (function() { try { return localStorage.getItem('loginRole') || 'kujdestar'; } catch (e) { return 'kujdestar'; } })();
 if (window.loginMode === 'admin') window.loginMode = 'kujdestar'; // admini zgjidhet me qëllim çdo herë
 
@@ -26746,13 +26746,13 @@ function refreshDisplay() {
         } else if (isTeacher()) {
             console.log("👨‍🏫 Duke renderuar Teacher Dashboard...");
             var cls = getCurrentClass();
-            // Roli zgjidhet te ekrani i hyrjes: "Kujdestar i klasës" hap panelin e klasës,
+            // Roli zgjidhet te ekrani i hyrjes: "Mësuesi/ja" hap panelin e klasës,
             // "Mësimdhënës" hap VETËM vlerësimet e lëndëve të tij (sipas caktimeve).
             var mode = getActiveTeacherMode();
             var myAssignments = getTeacherAssignments(currentUser.id);
             var switchBar = '';
             if (mode === 'mesimdhenes' && cls) {
-                switchBar = '<div style="text-align:right; margin-bottom:8px;"><button class="btn btn-info" onclick="switchTeacherMode(\'kujdestar\')">🔄 Kalo te paneli i kujdestarit (' + escapeHtml(cls.className) + ')</button></div>';
+                switchBar = '<div style="text-align:right; margin-bottom:8px;"><button class="btn btn-info" onclick="switchTeacherMode(\'mësues/e\')">🔄 Kalo te paneli i mësuesit/es (' + escapeHtml(cls.className) + ')</button></div>';
             } else if (mode === 'kujdestar' && myAssignments.length > 0) {
                 switchBar = '<div style="text-align:right; margin-bottom:8px;"><button class="btn btn-purple" onclick="switchTeacherMode(\'mesimdhenes\')">🔄 Kalo te ditari personal (' + teacherClassCount(myAssignments) + ' klasa)</button></div>';
             }
@@ -26762,16 +26762,16 @@ function refreshDisplay() {
                     '<div class="class-card-large"><h3>ℹ️ Nuk keni lëndë të caktuara ende.</h3><p>Administratori i cakton te <strong>Mësimdhënësit → ✏️ Caktimet</strong>.</p></div>';
             } else {
                 content = cls ? renderTeacherDashboard(cls) :
-                    '<div class="class-card-large"><h3>⚠️ Ju nuk jeni kujdestar i ndonjë klase.</h3><p>' +
+                    '<div class="class-card-large"><h3>⚠️ Ju nuk jeni mësues/e i ndonjë klase.</h3><p>' +
                     (myAssignments.length > 0 ? 'Për vlerësimet e lëndëve tuaja përdorni panelin e mësimdhënësit.' : 'Ju lutem kontaktoni administratorin.') + '</p></div>';
             }
             document.getElementById('dynamicContent').innerHTML = switchBar + content;
-            document.getElementById('userNameDisplay').innerHTML = (mode === 'mesimdhenes' ? '📝 MËSIMDHËNËSI | ' : '👨‍🏫 KUJDESTARI | ') + currentUser.name;
+            document.getElementById('userNameDisplay').innerHTML = (mode === 'mesimdhenes' ? '📝 MËSIMDHËNËSI | ' : '👨‍🏫 MËSUESI/JA | ') + currentUser.name;
             document.getElementById('principalDisplay').innerHTML = '';
             document.getElementById('schoolYearDisplay').innerHTML = systemData.schoolInfo.year;
             // RREGULLIM: mungonte këtu - butoni "Aktiv" (kalimi automatik i qelizave pas
             // vendosjes së notës) varet nga ky funksion; pa të, veçoria s'punonte fare kur
-            // kujdestari hynte drejtpërdrejt (funksiononte vetëm kur admini shikonte klasën).
+            // mësuesi/ja hynte drejtpërdrejt (funksiononte vetëm kur admini shikonte klasën).
             if (mode !== 'mesimdhenes' && cls) setTimeout(function() {
                 setupTableNavigation();
             }, 300);
@@ -26899,7 +26899,7 @@ function renderAdminDashboard() {
             
             <div class="admin-groups">
                 <div class="admin-group g-teachers"><div class="admin-group-title">👨‍🏫 Mësimdhënësit</div>
-                    <button class="btn btn-success" onclick="openTeacherCheckModal()" title="Lista, llogaritë, kujdestaria, orët - dhe problemet e gjetura automatikisht">👨‍🏫 Menaxhimi i mësimdhënësve</button>
+                    <button class="btn btn-success" onclick="openTeacherCheckModal()" title="Lista, llogaritë, klasa, orët - dhe problemet e gjetura automatikisht">👨‍🏫 Menaxhimi i mësimdhënësve</button>
                     <button class="btn btn-purple" onclick="openAssessmentsAdminModal()" title="Ditarët personalë - dy vlerësimet për gjysmëvjetor">📒 Ditarët e mësimdhënësve</button>
                     <button class="btn btn-danger" onclick="checkAdminDeadlineReport(true)" title="Mësimdhënësit që s'i kanë përfunduar vlerësimet pas afatit">🔔 Afatet e papërfunduara</button>
                     <button class="btn btn-info" onclick="openTeacherAveragesModal()" title="Mesatarja e notave që ka vënë secili mësimdhënës, me shpërndarjen 5-1">📈 Nota mesatare e mësimdhënësve</button>
@@ -27020,9 +27020,9 @@ function renderAdminDashboard() {
         });
     }
 
-    // 28.9.2026: dy lista të ndara - (1) kujdestarët sipas klasës, me "✏️ Ndrysho" që përdor
-    // veglën e ndërrimit të kujdestarit (orët s'preken); (2) mësimdhënësit pa kujdestari.
-    html += '<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-top:20px;"><h3 style="margin:0;">👨‍🏫 KUJDESTARËT E KLASAVE</h3>' +
+    // 28.9.2026: dy lista të ndara - (1) mësuesit sipas klasës, me "✏️ Ndrysho" që përdor
+    // veglën e ndërrimit të mësuesit/es (orët s'preken); (2) mësimdhënësit pa mësuesi/ja.
+    html += '<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-top:20px;"><h3 style="margin:0;">👨‍🏫 MËSUESIT E KLASAVE</h3>' +
         '<div>' +
         '<button class="btn btn-admin" onclick="openTeacherModal()" style="font-size:12px;">➕ Shto mësimdhënës</button> ' +
         '<button class="btn btn-info" onclick="printTeacherCredentials()" style="font-size:12px;">🖨️ Printo kredencialet</button></div></div>';
@@ -27035,9 +27035,9 @@ function renderAdminDashboard() {
         var t = systemData.teachers.find(function(x) { return x.classId === c.id; });
         html += '<div class="homeroom-card' + (t ? '' : ' empty') + '">' +
             '<div class="homeroom-class">' + escapeHtml(c.className) + '</div>' +
-            '<div class="homeroom-name">' + (t ? escapeHtml(t.name) + '<div style="font-size:11px; color:#666;">' + (t.username ? '🔑 ' + escapeHtml(t.username) : '<span style="color:#c62828;">⚠️ pa llogari</span>') + '</div>' : '<span style="color:#c62828;">— pa kujdestar —</span>') + '</div>' +
+            '<div class="homeroom-name">' + (t ? escapeHtml(t.name) + '<div style="font-size:11px; color:#666;">' + (t.username ? '🔑 ' + escapeHtml(t.username) : '<span style="color:#c62828;">⚠️ pa llogari</span>') + '</div>' : '<span style="color:#c62828;">— pa mësues/e —</span>') + '</div>' +
             '<div class="homeroom-actions">' +
-            '<button class="btn btn-success" onclick="openChangeHomeroomModal(\'' + c.id + '\')" title="Ndërro kujdestarin e klasës (orët e lëndëve s\'preken)">✏️ Ndrysho</button>' +
+            '<button class="btn btn-success" onclick="openChangeHomeroomModal(\'' + c.id + '\')" title="Ndërro mësuesin/en e klasës (orët e lëndëve s\'preken)">✏️ Ndrysho</button>' +
             (t ? '<button class="btn btn-admin" onclick="hubEdit(\'' + t.id + '\')" title="Emri, llogaria">👤</button>' +
                 (t.username ? '<button class="btn btn-admin" onclick="openChangePasswordForTeacher(\'' + t.id + '\')" title="Fjalëkalimi">🔑</button>' : '') : '') +
             '</div></div>';
@@ -27046,9 +27046,9 @@ function renderAdminDashboard() {
 
     var others = systemData.teachers.filter(function(t) { return !t.classId || !systemData.classes.some(function(c) { return c.id === t.classId; }); })
         .sort(function(a, b) { return String(a.name).localeCompare(String(b.name), 'sq'); });
-    html += '<h3 style="margin-top:22px;">📚 MËSIMDHËNËSIT PA KUJDESTARI (' + others.length + ')</h3>';
+    html += '<h3 style="margin-top:22px;">📚 MËSIMDHËNËSIT PA MËSUESI/JA (' + others.length + ')</h3>';
     if (!others.length) {
-        html += '<div style="padding:12px; background:#f8f9fa; border-radius:10px; font-size:13px;">Të gjithë mësimdhënësit janë kujdestarë.</div>';
+        html += '<div style="padding:12px; background:#f8f9fa; border-radius:10px; font-size:13px;">Të gjithë mësimdhënësit janë mësues.</div>';
     } else {
         others.forEach(function(t) {
             var nAsg = teacherClassCount(getTeacherAssignments(t.id));
